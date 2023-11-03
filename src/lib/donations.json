@@ -1,7 +1,7 @@
 [
     {
         "type": "cash",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -19,7 +19,7 @@
     },
     {
         "type": "clothing",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -37,7 +37,7 @@
     },
     {
         "type": "bedding",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -55,7 +55,7 @@
     },
     {
         "type": "food",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -73,7 +73,7 @@
     },
     {
         "type": "medical",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -91,7 +91,7 @@
     },
     {
         "type": "petSupplies",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",
@@ -109,7 +109,7 @@
     },
     {
         "type": "toiletries",
-        "total": "100",
+        "total": 100,
         "adjustments": [
             {
                 "date": "01/01/22",

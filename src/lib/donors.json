@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Leona",
+        "donations": [
+            {
+                "type": "medical",
+                "amount": 27,
+                "date": "01/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 3,
+                "date": "06/01/22"
+            }
+        ]
+    },
+    {
+        "name": "Delite Bakery",
+        "donations": [
+            {
+                "type": "food",
+                "amount": 27,
+                "date": "02/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 80,
+                "date": "03/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 40,
+                "date": "04/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 16,
+                "date": "05/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 5,
+                "date": "06/01/22"
+            }
+        ]
+    },
+    {
+        "name": "Scott",
+        "donations": [
+            {
+                "type": "bedding",
+                "amount": 40,
+                "date": "01/01/22"
+            },
+            {
+                "type": "food",
+                "amount": 40,
+                "date": "06/01/22"
+            }
+        ]
+    }
+]
