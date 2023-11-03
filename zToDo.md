@@ -14,7 +14,7 @@
 
 3. Feature Branches:
 
-- [ ] boilerplate, installs and dummy data
+- [x] boilerplate, installs and dummy data
 - [ ] databaset setup with Prisma and SQLite
 - [ ] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
