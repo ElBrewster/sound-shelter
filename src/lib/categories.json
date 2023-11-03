@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "cash",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 2,
+        "name": "clothing",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 3,
+        "name": "bedding",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 4,
+        "name": "food",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 5,
+        "name": "medical",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 6,
+        "name": "petSupplies",
+        "total": 100,
+        "adjustments": []
+    },
+    {
+        "id": 7,
+        "name": "toiletries",
+        "total": 100,
+        "adjustments": []
+    }
+]

@@ -9,3 +9,28 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Donor {
+  id        Int        @id @default(autoincrement())
+  name      String
+  email     String     @unique
+  phone     String
+  donations Donation[]
+}
+
+model Donation {
+  id         Int      @id @default(autoincrement())
+  donorId    Int      @unique
+  Donor      Donor?   @relation(fields: [donorId], references: [id])
+  categoryId Int
+  name       Category @relation(fields: [categoryId], references: [id])
+  date       String
+  amount     Int
+}
+
+model Category {
+  id          Int        @id @default(autoincrement())
+  name        String
+  total       Int
+  adjustments Donation[]
+}

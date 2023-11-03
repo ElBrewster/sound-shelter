@@ -1,128 +1,23 @@
 [
     {
-        "type": "cash",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
+        "id": 1,
+        "donorId": 1,
+        "categoryId": 1,
+        "date": "01/01/22",
+        "amount": 3
     },
     {
-        "type": "clothing",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
+        "id": 2,
+        "donorId": 2,
+        "categoryId": 7,
+        "date": "01/01/22",
+        "amount": -70
     },
     {
-        "type": "bedding",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
-    },
-    {
-        "type": "food",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
-    },
-    {
-        "type": "medical",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
-    },
-    {
-        "type": "petSupplies",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
-    },
-    {
-        "type": "toiletries",
-        "total": 100,
-        "adjustments": [
-            {
-                "date": "01/01/22",
-                "amount": 3
-            },
-            {
-                "date": "01/01/22",
-                "amount": -70
-            },
-            {
-                "date": "01/01/22",
-                "amount": 80
-            }
-        ]
+        "id": 3,
+        "donorId": 1,
+        "categoryId": 5,
+        "date": "01/01/22",
+        "amount": 80
     }
 ]
