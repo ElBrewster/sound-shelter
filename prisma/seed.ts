@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 // import { categories } from "../src/lib/categories.json";
 // import { donations } from "../src/lib/categories.json";
-import { donors } from "../src/lib/categories.json";
+import donors from "../src/lib/donors.json";
 
 const prisma = new PrismaClient();
 
@@ -15,11 +15,11 @@ async function main() {
                 email: p.email,
                 phone: p.phone,
                 donations: {
-                    create: {
-                        category: p.category,
-                        amount: p.amount,
-                        date: p.date
-                    },
+                    // create: {
+                    //     category: p.category,
+                    //     amount: p.amount,
+                    //     date: p.date
+                    // },
                 },
             }
         });
