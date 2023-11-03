@@ -3,18 +3,66 @@
         "name": "Leona",
         "email": "leona.s.stevents@comcast.net",
         "phone": "303-777-8888",
-        "donations": []
+        "donations": [
+            {
+                "category": "medical",
+                "amount": 27,
+                "date": "01/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 3,
+                "date": "06/01/22"
+            }
+        ]
     },
     {
         "name": "Delite Bakery",
         "email": "delite.bakery@yahoo.com",
         "phone": "914-333-1111",
-        "donations": []
+        "donations": [
+            {
+                "category": "food",
+                "amount": 27,
+                "date": "02/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 80,
+                "date": "03/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 40,
+                "date": "04/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 16,
+                "date": "05/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 5,
+                "date": "06/01/22"
+            }
+        ]
     },
     {
         "name": "Scott",
         "email": "Scott.Letterton@gmail.com",
         "phone": "808-555-8888",
-        "donations": []
+        "donations": [
+            {
+                "category": "bedding",
+                "amount": 40,
+                "date": "01/01/22"
+            },
+            {
+                "category": "food",
+                "amount": 40,
+                "date": "06/01/22"
+            }
+        ]
     }
 ]
