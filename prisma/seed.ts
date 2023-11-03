@@ -15,11 +15,11 @@ async function main() {
                 email: p.email,
                 phone: p.phone,
                 donations: {
-                    // create: {
-                    //     category: p.category,
-                    //     amount: p.amount,
-                    //     date: p.date
-                    // },
+                    create: {
+                        category: p.category,
+                        amount: p.amount,
+                        date: p.date
+                    },
                 },
             }
         });

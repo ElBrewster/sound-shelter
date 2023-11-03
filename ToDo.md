@@ -25,8 +25,8 @@
 
 ## Branch: `feature/database-setup`
 
-- [ ] installs for SQLite and Prisma ORM
-- [ ] typescript installs
+- [x] installs for SQLite and Prisma ORM
+- [x] typescript installs
 - [ ] models for donors and donations
 - [ ] seed database with `donations.json` and `donors.json`
 
