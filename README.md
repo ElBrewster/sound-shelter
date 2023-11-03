@@ -26,7 +26,9 @@ Also `npx tsx prisma/seed.ts` after troubleshooting, if db seed isn't successful
 
 Run `npx prisma studio` to view database in browser
 
-#### Addendums:
+`npx prisma generate` for distributions data model addition
+
+#### Addenda:
 
 added later: `npm i tslib`
 For importing JSON files into the `seed.ts` file, be sure to set `"resolveJsonModule": true,` in tsconfig

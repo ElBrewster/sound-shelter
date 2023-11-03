@@ -28,6 +28,7 @@
 - [x] installs for SQLite and Prisma ORM
 - [x] typescript installs
 - [ ] models for donors and donations
+- [ ] model for distributions
 - [ ] seed database with `donations.json` and `donors.json`
 
 ## Branch: `feature/record-donations`
