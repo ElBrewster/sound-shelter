@@ -14,8 +14,8 @@
 
 3. Feature Branches:
 
-- [ ] boilerplate, installs and dummy data
-- [ ] databaset setup with Prisma and SQLite
+- [x] boilerplate, installs and dummy data
+- [x] databaset setup with Prisma and SQLite
 - [ ] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
 - [ ] Feature: Reports
@@ -25,10 +25,11 @@
 
 ## Branch: `feature/database-setup`
 
-- [ ] installs for SQLite and Prisma ORM
-- [ ] typescript installs
-- [ ] models for donors and donations
-- [ ] seed database with `donations.json` and `donors.json`
+- [x] installs for SQLite and Prisma ORM
+- [x] typescript installs
+- [x] models for donors and donations
+- [x] model for distributions
+- [x] seed database with `distributions.json` and `donors.json`
 
 ## Branch: `feature/record-donations`
 

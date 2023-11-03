@@ -1,38 +1,34 @@
-# create-svelte
+# the Sound Shelter's donations management tool
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Setup
 
-## Creating a project
+### Prisma Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
+Install: `npm install typescript ts-node @types/node --save-dev`
+Initialize TypeScript: `npx tsc --init`
+Install Prisma CLI: `npm install prisma --save-dev`
+Setup Prisma: `npx prisma init --datasource-provider sqlite`
+Create data models in `prisma/schema.prisma`
+Create `seed.ts` file to seed data in `prisma` directory
+Add content to seed file using dummy data
+Also needed: `npm install tsx --save-dev` and to use
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```json
+	"prisma": {
+        "seed": "tsx prisma/seed.ts"
+	},
 ```
 
-## Developing
+<!--I believe this^ solves a SvelteKit issue regarding TypeScript, the prisma guide for Svelte uses `"seed": "ts-node prisma/seed.ts"` -->
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Run `npx prisma migrate dev --name init` to seed database and install `@prisma/client`
+Also `npx tsx prisma/seed.ts` after troubleshooting, if db seed isn't successful on the first try
 
-```bash
-npm run dev
+Run `npx prisma studio` to view database in browser
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+`npx prisma generate` for distributions data model addition
 
-## Building
+#### Addenda:
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+added later: `npm i tslib`
+For importing JSON files into the `seed.ts` file, be sure to set `"resolveJsonModule": true,` in tsconfig
