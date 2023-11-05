@@ -7,12 +7,12 @@
     "medical",
     "other",
     "pet supplies",
-    "toiletries",
+    "toiletries"
   ];
-  let selected: String;
+  let selected;
   let name = "donor";
   let n = 1;
-  let date: String;
+  let date;
   let anonymous = false;
 
   function handleSubmit() {

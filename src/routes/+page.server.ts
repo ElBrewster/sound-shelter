@@ -15,15 +15,16 @@ export const actions = {
         const data = await request.formData();
 
         let category = data.get("category");
-        let amount = data.get("amount")?.toString();
+        let amount = data.get("amount");
         let date = data.get("date");
         let donor = data.get("donor");
+
 
         if (!amount || !category || !date || !donor) {
             return fail(400, {amount, category, date, donor, missing: true});
         }
 
-        if(typeof amount != "string" || typeof category != "string" || typeof date != "string" || typeof donor != "string") {
+        if(typeof amount != "number" || typeof category != "string" || typeof date != "string" || typeof donor != "string") {
             return fail(400, { incorrect: true});
         }
         // if donor is new, then add new donor
@@ -34,7 +35,7 @@ export const actions = {
                 amount,
                 category,
                 date,
-                donor: {connect: {name: donor}}
+                donor: {connect: {id: id}}
             },
         });
 
