@@ -1,8 +1,15 @@
 # the Sound Shelter's donations management tool
 
+`npm i`
+
+1. To setup and seed database:
+
+- Run `npx prisma migrate dev --name init` to seed database and install `@prisma/client`
+- View data in browser with by running `npx prisma studio`
+
 ## Setup
 
-### Prisma Setup
+### Prisma Setup and Installs (Long)
 
 Install: `npm install typescript ts-node @types/node --save-dev`
 Initialize TypeScript: `npx tsc --init`

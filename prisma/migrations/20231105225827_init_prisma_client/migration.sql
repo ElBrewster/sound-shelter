@@ -23,3 +23,6 @@ CREATE TABLE "Distribution" (
     "category" TEXT NOT NULL,
     "date" TEXT NOT NULL
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Donor_email_key" ON "Donor"("email");

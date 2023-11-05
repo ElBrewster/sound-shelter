@@ -1,9 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-// import distributions from "../src/lib/distributions.json";
-
-const prisma = new PrismaClient();
-
-const userData = [
+[
     {
         name: "Leona",
         email: "leona.s.stevents@comcast.net",
@@ -19,7 +14,8 @@ const userData = [
                     amount: 3,
                     category: "food",
                     date: "06/01/22"
-                }
+                },
+
             ]
         }
     },
@@ -82,50 +78,3 @@ const userData = [
         }
     }
 ];
-
-const distributions = [
-    {
-        amount: 3,
-        category: "food",
-        date: "01/01/22"
-    },
-    {
-        amount: 70,
-        category: "bedding",
-        date: "01/01/22"
-    },
-    {
-        amount: 80,
-        category: "medical",
-        date: "01/01/22"
-    }
-];
-
-async function main() {
-    console.log(`Start seeding ...`);
-
-    for (const u of userData) {
-        const donor = await prisma.donor.create({
-            data: u,
-        });
-        console.log(`Created donor with id: ${donor.id}`);
-    }
-
-    for (const p of distributions) {
-        const distribution = await prisma.distribution.create({
-            data: p,
-        });
-        console.log(`Created distribution with id: ${distribution.id}`);
-    }
-    console.log(`Seeding finished.`);
-}
-
-main()
-    .then(async () => {
-        await prisma.$disconnect()
-    })
-    .catch(async (e) => {
-        console.error(e)
-        await prisma.$disconnect()
-        process.exit(1)
-    })
