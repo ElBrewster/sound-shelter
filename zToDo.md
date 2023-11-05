@@ -39,6 +39,7 @@
 - [ ] this creates a "donation instance" under a donor's name
 - [ ] add logic to change our data for a donation type total based on new submission
 - [ ] start with the `DonorForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+- [ ] the donor name text box auto-completes previous donors (moved up from wishlist)
 - [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 
 ### donor user stories:
@@ -68,7 +69,6 @@
 - [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
 Wishlist:
-the donor name text box auto-completes previous donors
 add dayjs or similar library to offer current date selection in form
 Admin view, ability to add things like new types of donations to the Select dropdown
 Login or Oauth, so only shelter employees and volunteers can access the information

@@ -1,4 +1,6 @@
 <script lang="ts">
+//import donor name data for autocomplete of donor input field
+
   let categories = [
     "bedding",
     "cash",
@@ -13,6 +15,7 @@
   let name = "donor";
   let n = 1;
   let date;
+  let email;
   let anonymous = false;
 
   function handleSubmit() {
@@ -51,5 +54,6 @@
     <input type="checkbox" bind:checked={anonymous} />
   </label>
   <input type="text" bind:value={name} />
+  <input type="email" bind:value={email} />
   <button disabled={!selected} type="submit">submit</button>
 </form>

@@ -18,13 +18,14 @@ export const actions = {
         let amount = data.get("amount");
         let date = data.get("date");
         let donor = data.get("donor");
+        let email = data.get("email");
 
 
-        if (!amount || !category || !date || !donor) {
+        if (!amount || !category || !date || !donor || !email) {
             return fail(400, {amount, category, date, donor, missing: true});
         }
 
-        if(typeof amount != "number" || typeof category != "string" || typeof date != "string" || typeof donor != "string") {
+        if(typeof amount != "number" || typeof category != "string" || typeof date != "string" || typeof donor != "string" || typeof email != "string") {
             return fail(400, { incorrect: true});
         }
         // if donor is new, then add new donor
@@ -35,7 +36,7 @@ export const actions = {
                 amount,
                 category,
                 date,
-                donor: {connect: {id: id}}
+                donor: {connect: {email: email}}
             },
         });
 
