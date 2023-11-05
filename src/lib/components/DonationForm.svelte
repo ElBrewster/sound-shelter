@@ -11,6 +11,7 @@
   let selected;
   let name = "donor";
   let n = 1;
+  let date;
   let anonymous = false;
 
   function handleSubmit() {
@@ -35,6 +36,7 @@
     <input type="range" bind:value={n} min="1" max="1000" />
   </label>
   <!-- date feature -->
+  <input type="date" bind:value={date} />
   <!-- donor input -->
   <input type="checkbox" bind:checked={anonymous} />
   <input type="text" bind:value={name} />
