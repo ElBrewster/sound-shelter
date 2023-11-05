@@ -26,7 +26,7 @@
 ## Branch: `feature/database-setup`
 
 - [x] installs for SQLite and Prisma ORM
-- [x] typescript installs
+- [x] TypeScript installs
 - [x] models for donors and donations
 - [x] model for distributions
 - [x] seed database with `distributions.json` and `donors.json`
@@ -38,8 +38,9 @@
 - [ ] be able to submit name, type, amount, date to data storage:
 - [ ] this creates a "donation instance" under a donor's name
 - [ ] add logic to change our data for a donation type total based on new submission
-
-donor user stories:
+- [ ] start with the `DonorForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+      donor user stories:
+- [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 
 - Leonna from an urgent care clinic brought us surplus bandages
 - Delite Bakery brought 2-day-old bread and pastries
@@ -52,6 +53,7 @@ donor user stories:
 - [ ] be able to add date, amount, and type record to "total donations" data
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation
+- [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
 
 ## Branch: `feature/reports`
 
@@ -62,6 +64,7 @@ donor user stories:
 - [ ] from a homepage list of donors (wishlist: search bar to search donor names)
 - [ ] be able to view all donations from one user on their route,
 - [ ] be able to print out their record
+- [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
 Wishlist:
 Admin view, ability to add things like new types of donations to the Select dropdown
