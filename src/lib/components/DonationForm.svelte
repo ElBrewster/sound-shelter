@@ -1,5 +1,8 @@
 <script lang="ts">
   //import donor name data for autocomplete of donor input field
+  // import type { ActionData } from "../../routes/$types";
+
+  export let form;
 
   let categories = [
     "bedding",
@@ -28,7 +31,7 @@
   }
 </script>
 
-<form method="POST">
+<form method="post">
   <!-- select category -->
   <select bind:value={selected}>
     {#each categories as category}

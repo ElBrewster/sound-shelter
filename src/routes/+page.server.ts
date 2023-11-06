@@ -14,10 +14,6 @@ export const actions = {
     default: async ({request}) => {
         const data = await request.formData();
 
-        for (var pair of request.formData.entries()) {
-            console.log(pair[0]+ ', ' + pair[1]); 
-        }
-
         let category = data.get("category");
         let amount = data.get("amount");
         let date = data.get("date");

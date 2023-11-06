@@ -23,3 +23,7 @@
 
 [Svelte named slots](https://learn.svelte.dev/tutorial/named-slots)
 [Svelte slot props](https://learn.svelte.dev/tutorial/slot-props)
+
+## Stackblitz
+
+[how to add prisma](https://stackblitz.com/edit/node-psqsqe?file=repro.js)
