@@ -2,7 +2,6 @@
 @use 'typography' as *;
 @use 'sizes' as *;
 
-$prefix: "pony";
 $active-theme: $dark;
 $enable-media-query-dark-mode: false;
 
@@ -81,17 +80,6 @@ $link-button-color: $body-text-color;
 $link-button-background-color: $body-background-color;
 $link-button-color-hover: $color-primary-300;
 
-$tile-button-background-color: $color-accent-900;
-$tile-button-color: $color-accent-200;
-$tile-button-background-color-hover: $color-neutral-800;
-$tile-button-color-active: $color-neutral-000;
-$tile-button-background-color-active: $color-primary-900;
-$tile-button-border-left: 2px solid $color-neutral-300;
-$tile-button-border-top: 2px solid $color-neutral-300;
-$tile-button-border-bottom: 2px solid $color-neutral-800;
-$tile-button-border-right: 2px solid $color-neutral-800;
-$tile-button-border-radius: .1rem;
-$tile-button-padding-inline: .2em;
 
 //--components--
 $site-header-color: $color-accent-100;
@@ -112,18 +100,3 @@ $footer-link-text-decoration: none;
 $footer-fine-print: $body-font-size;
 $footer-fine-print-family: $body-font-family;
 
-$tile-background-color: $color-neutral-800;
-$tile-border-right: 3px solid $color-neutral-900;
-$tile-border-top: 3px solid $color-neutral-400;
-$tile-border-left: 3px solid $color-neutral-500;
-$tile-border-bottom: 3px solid $color-accent-900;
-$tile-header-top: 1px solid $color-neutral-400;
-$tile-header-left: 1px solid $color-neutral-400;
-$tile-header-right: 1px solid $color-neutral-600;
-$tile-header-color: $color-neutral-900;
-$tile-header-background-color: $color-neutral-600;
-$tile-header-font-family: $font-family-accent;
-$tile-content-bottom: 1px solid $color-neutral-700;
-$tile-content-left: 1px solid $color-neutral-400;
-$tile-content-right: 1px solid $color-neutral-600;
-$tile-content-font-family: $font-family-base;
