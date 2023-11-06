@@ -75,10 +75,12 @@
 - [ ] attribution for images
 
 Wishlist:
-add dayjs or similar library to offer current date selection in form
-Admin view, ability to add things like new types of donations to the Select dropdown
-Login or Oauth, so only shelter employees and volunteers can access the information
-(Admin would be able to add and remove people's access)
+
+- [ ] add dayjs or similar library to offer current date selection in form
+- [ ] Admin view, ability to add things like new types of donations to the Select dropdown
+- [ ] Login or Oauth, so only shelter employees and volunteers can access the information
+      (Admin would be able to add and remove people's access)
 
 - [ ] the donor name text box auto-completes previous donors
-- [ ] start with the `DonorForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+- [ ] start with the `DonationForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+- [ ] dark mode and light mode toggle
