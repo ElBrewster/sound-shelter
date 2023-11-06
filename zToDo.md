@@ -6,8 +6,8 @@
 
 2. Components:
 
-- [ ] DonorForm
 - [ ] DonationForm
+- [ ] InventoryForm
 - [ ] Card (for mapping data)
 - [ ] Header
 - [ ] Footer
@@ -16,7 +16,7 @@
 
 - [x] boilerplate, installs and dummy data
 - [x] databaset setup with Prisma and SQLite
-- [ ] Feature: Record Donations
+- [x] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
 - [ ] Feature: Reports
 - [ ] styling
@@ -33,7 +33,7 @@
 
 ## Branch: `feature/record-donations`
 
-- [x] implement `DonorForm.svelte` by adding component content
+- [x] implement `DonationForm.svelte` by adding component content
 - [x] Select type from dropdown in DonorForm
 - [x] be able to submit donor name, type, amount, date to data storage:
 - [x] this creates a "donation instance" under a donor's name (data does not persist, needs troubleshooting)
@@ -46,8 +46,8 @@
 
 ## Branch: `feature/adjust-inventory`
 
-- [ ] implement `DonationForm.svelte` by adding component content
-- [ ] Select type from dropdown in DonationForm
+- [ ] implement `InventoryForm.svelte` by adding component content
+- [ ] Select type from dropdown in InventoryForm
 - [ ] be able to add date, amount, and type record to "total donations" data
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation

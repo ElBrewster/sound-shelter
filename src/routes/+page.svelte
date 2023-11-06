@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Footer from "$lib/components/Footer.svelte";
+  import Header from "$lib/components/Header.svelte";
   import DonationForm from "$lib/components/DonationForm.svelte";
 
   export let form;
@@ -6,8 +8,7 @@
 </script>
 
 <div>
-  <h1>the Sound Community Shelter</h1>
-  <p>donations management tool</p>
+  <Header />
 
   <DonationForm {form} {data} />
 
@@ -17,4 +18,6 @@
       <p>{donor.email}</p>
     {/each}
   </main>
+
+  <Footer />
 </div>
