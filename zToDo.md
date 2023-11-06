@@ -26,20 +26,19 @@
 ## Branch: `feature/database-setup`
 
 - [x] installs for SQLite and Prisma ORM
-- [x] typescript installs
+- [x] TypeScript installs
 - [x] models for donors and donations
 - [x] model for distributions
 - [x] seed database with `distributions.json` and `donors.json`
 
 ## Branch: `feature/record-donations`
 
-- [ ] implement `DonorForm.svelte` by adding component content
-- [ ] Select type from dropdown in DonorForm
-- [ ] be able to submit name, type, amount, date to data storage:
-- [ ] this creates a "donation instance" under a donor's name
-- [ ] add logic to change our data for a donation type total based on new submission
+- [x] implement `DonorForm.svelte` by adding component content
+- [x] Select type from dropdown in DonorForm
+- [x] be able to submit donor name, type, amount, date to data storage:
+- [x] this creates a "donation instance" under a donor's name (data does not persist, needs troubleshooting)
 
-donor user stories:
+### donor user stories:
 
 - Leonna from an urgent care clinic brought us surplus bandages
 - Delite Bakery brought 2-day-old bread and pastries
@@ -52,9 +51,12 @@ donor user stories:
 - [ ] be able to add date, amount, and type record to "total donations" data
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation
+- [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
 
 ## Branch: `feature/reports`
 
+- [ ] add logic to change our data for a donation type total based on new submission
+- [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 - [ ] GET inventory (totals)
 - [ ] display totals on homepage in a dashboard style
 - [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`
@@ -62,8 +64,13 @@ donor user stories:
 - [ ] from a homepage list of donors (wishlist: search bar to search donor names)
 - [ ] be able to view all donations from one user on their route,
 - [ ] be able to print out their record
+- [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
 Wishlist:
+add dayjs or similar library to offer current date selection in form
 Admin view, ability to add things like new types of donations to the Select dropdown
 Login or Oauth, so only shelter employees and volunteers can access the information
 (Admin would be able to add and remove people's access)
+
+- [ ] the donor name text box auto-completes previous donors
+- [ ] start with the `DonorForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
