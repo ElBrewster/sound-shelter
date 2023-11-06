@@ -20,7 +20,7 @@
 
   let selected;
   let name = "donor";
-  let n = 1;
+  let amount = 1;
   let date;
   let email;
   let phone;
@@ -28,10 +28,10 @@
 
   function handleSubmit() {
     if (!anonymous) {
-      console.log(`You've added ${n} ${selected} from ${name}.`);
+      console.log(`You've added ${amount} ${selected} from ${name}.`);
     } else {
       name = "anonymous";
-      console.log(`You've added ${n} ${selected} from an ${name} donor.`);
+      console.log(`You've added ${amount} ${selected} from an ${name} donor.`);
     }
   }
 </script>
@@ -50,22 +50,25 @@
       name="amount"
       id="amount"
       type="number"
-      bind:value={n}
+      bind:value={amount}
       min="1"
       max="1000"
     />
-    <input type="range" bind:value={n} min="1" max="1000" />
+    <input type="range" bind:value={amount} min="1" max="1000" />
   </label>
-  <label for="date">When was the donation made?</label>
-  <input
-    name="date"
-    id="date"
-    type="date"
-    bind:value={date}
-    min="2017-04-01"
-    max="2024-01-30"
-    required
-  />
+
+  <label for="date"
+    >When was the donation made?
+    <input
+      name="date"
+      id="date"
+      type="date"
+      bind:value={date}
+      min="2017-04-01"
+      max="2024-01-30"
+      required
+    />
+  </label>
 
   <label for="anonymous">
     Check for anonymous donation
@@ -78,16 +81,29 @@
   </label>
 
   <!-- need logic to remove name/email for anonymous donor:  -->
-  <label for="donor">donor name</label>
-  <input name="donor" id="donor" type="text" bind:value={name} />
+  <label for="donor"
+    >donor name
+    <input name="donor" id="donor" type="text" bind:value={name} />
+  </label>
 
-  <label for="email">contact info: </label>
-  <input name="email" id="email" type="email" bind:value={email} />
+  <label for="email"
+    >contact info:
+    <input name="email" id="email" type="email" bind:value={email} />
+  </label>
   <input name="phone" type="tel" bind:value={phone} />
+
+  {#if form?.error}
+    <div>
+      {form.error}
+    </div>
+  {/if}
 
   <button disabled={!selected} type="submit">submit</button>
 </form>
 
+{#if form?.message}
+  <div>{form.message}</div>
+{/if}
 <!-- <div>
   {#if email}
     <p>Name: {name}</p>

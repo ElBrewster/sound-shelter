@@ -16,14 +16,13 @@ export const actions: Actions = {
         const data = Object.fromEntries(await request.formData());
         const {category, amount, date, donor, email} = data;
         console.log("From formData: ", category, amount, date, donor, email);
+        // if (!amount || !category || !date || !donor || !email) {
+        //     return fail(400, {amount, category, date, donor, missing: true});
+        // }
     
-        if (!amount || !category || !date || !donor || !email) {
-            return fail(400, {amount, category, date, donor, missing: true});
-        }
-    
-        if(typeof amount != "number" || typeof category != "string" || typeof date != "string" || typeof donor != "string" || typeof email != "string") {
-            return fail(400, { incorrect: true});
-        }
+        // if(typeof amount != "number" || typeof category != "string" || typeof date != "string" || typeof donor != "string" || typeof email != "string") {
+        //     return fail(400, { incorrect: true});
+        // }
         // if donor is new, then add new donor
         // if donor was found, refer to unique identifier of donor (id)
         // if donor is anonymous, treat as found w/unique id for "anonymous donor"
@@ -36,6 +35,7 @@ export const actions: Actions = {
             },
         });
     
-        throw redirect(303, `/`);
+        return {message: `You've added ${data.amount} of ${data.category} from ${data.donor} to our database.`}
+        // throw redirect(303, `/`);
     }
 };
