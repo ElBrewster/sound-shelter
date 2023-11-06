@@ -66,6 +66,14 @@
 - [ ] be able to print out their record
 - [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
+## Branch: `feature/styling`
+
+- [ ] sass installs
+- [ ] sass file and folder setup
+- [ ] tokens file implementation
+- [ ] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
+- [ ] attribution for images
+
 Wishlist:
 add dayjs or similar library to offer current date selection in form
 Admin view, ability to add things like new types of donations to the Select dropdown
