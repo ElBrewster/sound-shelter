@@ -1,10 +1,13 @@
 <script lang="ts">
-  //import donor name data for autocomplete of donor input field
-  // import type { ActionData } from "../../routes/$types";
+  import { enhance } from "$app/forms";
 
+  //import donor name data for autocomplete of donor input field?
+
+  export let data;
   export let form;
 
   let categories = [
+    "",
     "bedding",
     "cash",
     "clothing",
@@ -14,11 +17,13 @@
     "pet supplies",
     "toiletries",
   ];
+
   let selected;
   let name = "donor";
   let n = 1;
   let date;
   let email;
+  let phone;
   let anonymous = false;
 
   function handleSubmit() {
@@ -31,42 +36,64 @@
   }
 </script>
 
-<form method="post">
-  <!-- select category -->
-  <select bind:value={selected}>
+<form method="post" use:enhance={handleSubmit}>
+  <label for="category">Pick a donation category:</label>
+  <select name="category" id="category" bind:value={selected} required>
     {#each categories as category}
       <option value={category}>{category}</option>
     {/each}
   </select>
-  <!-- number input amount -->
-  <label for="">
-    <input type="number" bind:value={n} min="1" max="1000" />
-    <!-- <input type="range" bind:value={n} min="1" max="1000" /> -->
+
+  <label for="amount"
+    >How many?
+    <input
+      name="amount"
+      id="amount"
+      type="number"
+      bind:value={n}
+      min="1"
+      max="1000"
+    />
+    <input type="range" bind:value={n} min="1" max="1000" />
   </label>
-  <!-- date feature -->
+  <label for="date">When was the donation made?</label>
   <input
+    name="date"
+    id="date"
     type="date"
     bind:value={date}
     min="2017-04-01"
     max="2024-01-30"
     required
   />
-  <!-- donor input -->
-  <label for="">
+
+  <label for="anonymous">
     Check for anonymous donation
-    <input type="checkbox" bind:checked={anonymous} />
+    <input
+      name="anonymous"
+      id="anonymous"
+      type="checkbox"
+      bind:checked={anonymous}
+    />
   </label>
-  <input type="text" bind:value={name} />
-  <input type="email" bind:value={email} required />
+
+  <!-- need logic to remove name/email for anonymous donor:  -->
+  <label for="donor">donor name</label>
+  <input name="donor" id="donor" type="text" bind:value={name} />
+
+  <label for="email">contact info: </label>
+  <input name="email" id="email" type="email" bind:value={email} />
+  <input name="phone" type="tel" bind:value={phone} />
+
   <button disabled={!selected} type="submit">submit</button>
 </form>
 
-<div>
+<!-- <div>
   {#if email}
     <p>Name: {name}</p>
     <p>Email: {email}</p>
     <p>Date: {date}</p>
     <p>Category: {selected}</p>
-    <!-- <p>Amount: {amount}</p> -->
+    <p>Amount: {amount}</p>
   {/if}
-</div>
+</div> -->
