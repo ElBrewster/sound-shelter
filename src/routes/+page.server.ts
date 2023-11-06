@@ -14,12 +14,17 @@ export const actions = {
     default: async ({request}) => {
         const data = await request.formData();
 
+        for (var pair of request.formData.entries()) {
+            console.log(pair[0]+ ', ' + pair[1]); 
+        }
+
         let category = data.get("category");
         let amount = data.get("amount");
         let date = data.get("date");
         let donor = data.get("donor");
         let email = data.get("email");
 
+console.log("From formData: ", category, amount, date, donor, email);
 
         if (!amount || !category || !date || !donor || !email) {
             return fail(400, {amount, category, date, donor, missing: true});
@@ -42,4 +47,4 @@ export const actions = {
 
         throw redirect(303, `/`);
     }
-}
+};

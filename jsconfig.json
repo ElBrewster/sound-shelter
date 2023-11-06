@@ -5,6 +5,10 @@
 		"checkJs": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
+		"lib": [
+			"dom",
+			"dom.iterable"
+		],
 		"module": "ESNext", 
 		"moduleResolution": "Node",  
 		"resolveJsonModule": true,
