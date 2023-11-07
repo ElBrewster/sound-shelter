@@ -8,11 +8,12 @@
   box-shadow: $box-shadow-1;
   display: flex;
   flex-direction: column;
-  gap: grid-gap;
-  padding: 1rem;
+  gap: $flex-group-gap;
+  padding-block: 1rem;
   max-width: 50ch;
 
   &__input-container {
+    border-bottom: 1px solid $color-accent-700;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,6 +29,7 @@ label {
   font-family: $form-label-font-family;
   font-weight: $form-label-font-weight;
   font-size: $form-label-font-size;
+  padding-inline: 1rem;
 }
 
 select,
@@ -39,6 +41,8 @@ input:not(.button) {
   padding: $form-input-padding;
   border: $form-input-border-default;
   border-radius: $form-input-border-radius;
+  margin-inline: 1rem;
+
 }
 
 ::placeholder {

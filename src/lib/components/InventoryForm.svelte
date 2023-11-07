@@ -21,7 +21,7 @@
   }
 </script>
 
-<div class="form-container" id="inventory">
+<div class="form-container flow" id="inventory">
   <h2 class="heading-2">Record Donation Distribution:</h2>
   <form class="inventory-form" method="post" use:enhance={handleSubmit}>
     <div class="inventory-form__input-container">
@@ -46,6 +46,7 @@
     </div>
     <div class="inventory-form__input-container">
       <label for="amount">donation amount: </label>
+      <input type="range" bind:value={amount} min="1" max="1000" />
       <input
         name="amount"
         id="amount"
@@ -54,7 +55,6 @@
         min="1"
         max="1000"
       />
-      <input type="range" bind:value={amount} min="1" max="1000" />
     </div>
     <div>
       <button

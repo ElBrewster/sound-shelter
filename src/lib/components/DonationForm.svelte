@@ -38,7 +38,7 @@
   }
 </script>
 
-<div class="form-container" id="newDonation">
+<div class="form-container flow" id="newDonation">
   <h2 class="heading-2">Record Incoming Donation:</h2>
 
   <form class="donation-form" method="post" use:enhance={handleSubmit}>
@@ -64,6 +64,7 @@
     </div>
     <div class="donation-form__input-container">
       <label for="amount">donation amount: </label>
+      <input type="range" bind:value={amount} min="1" max="1000" />
       <input
         name="amount"
         id="amount"
@@ -72,7 +73,6 @@
         min="1"
         max="1000"
       />
-      <input type="range" bind:value={amount} min="1" max="1000" />
     </div>
     <div class="donation-form__input-container">
       <label for="anonymous"> anonymous donation? </label>
