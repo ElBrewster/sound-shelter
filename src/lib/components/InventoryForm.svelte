@@ -56,7 +56,7 @@
         max="1000"
       />
     </div>
-    <div>
+    <div class="padding-inline-4">
       <button
         class="button"
         disabled={!selected}

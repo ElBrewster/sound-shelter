@@ -103,7 +103,7 @@
         {form.error}
       </div>
     {/if}
-    <div>
+    <div class="padding-inline-4">
       <button
         class="button"
         disabled={!selected}
