@@ -1,1 +1,1 @@
-<h2>This page is a placeholder for routing and navigation functionality</h2>
+<h2>This page is a placeholder for routing and navigation</h2>

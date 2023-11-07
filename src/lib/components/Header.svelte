@@ -7,8 +7,12 @@
   <div class="container">
     <div class="site-header__inner">
       <hgroup class="hgroup">
-        <h1 class="heading-1">the Sound Community Shelter</h1>
-        <p class="hgroup__p">donations management tool</p>
+        <a href="/">
+          <h1 class="heading-1">the Sound Community Shelter</h1>
+        </a>
+        <a href="/">
+          <p class="hgroup__p">donations management tool</p>
+        </a>
       </hgroup>
       <div>
         <img class="logo" {src} alt="svelte icon" />
