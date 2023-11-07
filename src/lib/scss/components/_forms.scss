@@ -32,6 +32,14 @@ label {
   padding-inline: 1rem;
 }
 
+.checkbox {
+  border: $form-input-border-default;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 1rem;
+}
+
 select,
 input:not(.button) {
   font-size: $form-input-font-size;

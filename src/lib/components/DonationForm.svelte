@@ -77,6 +77,7 @@
     <div class="donation-form__input-container">
       <label for="anonymous"> anonymous donation? </label>
       <input
+        class="checkbox"
         name="anonymous"
         id="anonymous"
         type="checkbox"
