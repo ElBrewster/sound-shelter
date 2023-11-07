@@ -12,8 +12,8 @@ $color-text-interactive-default: $color-accent-200;
 $color-text-interactive-hover: $color-accent-300;
 $letter-spacing-loose: .025rem;
 
-$border-radius-1: $size-2;
-$border-radius-2: $size-4;
+$border-radius-1: $size-1;
+$border-radius-2: $size-2;
 
 $box-shadow-1: 0px 6px 5px rgb(0, 0, 0, 0.012),
   0px 22px 18px rgb(0, 0, 0, 0.018), 0px 100px 80px rgb(0, 0, 0, 0.03);
@@ -68,6 +68,7 @@ $heading-3-font-size: $font-size-600;
 
 //--buttons--
 $button-border: 0;
+$button-border-radius: $border-radius-2;
 $button-font-family: $body-font-family;
 $button-font-size: $font-size-500;
 $button-font-weight: $font-weight-medium;
@@ -134,7 +135,7 @@ $logo-fill-header: $logo-fill-default;
 $logo-fill-footer: $logo-fill-default;
 
 //--forms--
-$form-label-color: $body-text-color;
+$form-label-color: $color-neutral-200;
 $form-label-font-family: $font-family-base;
 $form-label-font-weight: $font-weight-bold;
 $form-label-font-size: $body-font-size;
@@ -144,7 +145,7 @@ $form-input-font-family: $body-font-family;
 $form-input-font-weight: $font-weight-semi-bold;
 $form-input-font-size: $body-font-size;
 $form-input-background-color: $color-neutral-100;
-$form-input-border-default: 3px solid $color-primary-200;
+$form-input-border-default: 3px solid $color-accent-700;
 $form-input-border-focus: 3px solid $color-primary-400;
 $form-input-padding: $size-3;
 $form-input-border-radius: $border-radius-1;
@@ -154,7 +155,7 @@ $form-placeholder-font-family: $form-input-font-family;
 $form-placeholder-font-weight: $form-input-font-weight;
 $form-placeholder-font-size: $body-font-size;
 
-$form-border: 3px solid $color-primary-200;
+$form-border: 3px solid $color-accent-700;
 $form-border-radius: $border-radius-1;
 $form-background-color: $color-accent-900;
 $form-group-spacing: 0.5rem;

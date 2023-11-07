@@ -8,6 +8,9 @@
       font-size: $button-font-size;
       text-transform: $button-text-transform;
       font-weight: $button-font-weight;
+      padding: $button-padding;
+      border: $button-border;
+      border-radius: $button-border-radius;
       transition: 100ms ease;
   
       &[data-type="primary"] {
