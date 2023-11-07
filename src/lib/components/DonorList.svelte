@@ -4,7 +4,7 @@
   export let data;
 </script>
 
-<div class="donor-list-container" id="donorList">
+<div id="donorList">
   <p>donators</p>
   {#each data.feed as donor (donor.id)}
     <p>{donor.name}</p>

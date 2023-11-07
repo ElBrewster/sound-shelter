@@ -16,17 +16,17 @@
       <DonationForm {form} {data} />
     </div>
   </div>
-  <div class="section">
-    <div class="container">
-      <InventoryForm />
-    </div>
-  </div>
-  <div class="section">
+  <div class="section donor-list-container">
     <div class="container">
       <DonorList {data} />
     </div>
   </div>
   <div class="section">
+    <div class="container">
+      <InventoryForm />
+    </div>
+  </div>
+  <div class="section inventory-totals-container">
     <div class="container">
       <InventoryTotals />
     </div>

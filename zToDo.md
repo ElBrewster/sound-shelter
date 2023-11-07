@@ -12,7 +12,7 @@
 - [ ] Card (for mapping data)
 - [x] Header
 - [x] Footer
-- [ ] ToolNav
+- [x] ToolNav
 
 3. Feature Branches:
 
@@ -54,8 +54,8 @@
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation
 - [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
-- [ ] add nav in or below site header for page navigation through the various components ->
-- [ ] implement component `ToolNav.svelte`
+- [x] add nav in or below site header for page navigation through the various components ->
+- [x] implement component `ToolNav.svelte`
 
 ## Branch: `feature/reports`
 
