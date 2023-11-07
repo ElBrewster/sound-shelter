@@ -49,18 +49,6 @@
       </select>
     </div>
     <div class="donation-form__input-container">
-      <label for="amount">donation amount: </label>
-      <input
-        name="amount"
-        id="amount"
-        type="number"
-        bind:value={amount}
-        min="1"
-        max="1000"
-      />
-      <input type="range" bind:value={amount} min="1" max="1000" />
-    </div>
-    <div class="donation-form__input-container">
       <label for="date">donation date: </label>
       <input
         name="date"
@@ -71,6 +59,18 @@
         max="2024-01-30"
         required
       />
+    </div>
+    <div class="donation-form__input-container">
+      <label for="amount">donation amount: </label>
+      <input
+        name="amount"
+        id="amount"
+        type="number"
+        bind:value={amount}
+        min="1"
+        max="1000"
+      />
+      <input type="range" bind:value={amount} min="1" max="1000" />
     </div>
     <div class="donation-form__input-container">
       <label for="anonymous"> anonymous donation? </label>

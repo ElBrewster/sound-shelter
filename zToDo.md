@@ -2,15 +2,17 @@
 
 1. Routes:
    [ ] homepage: /
+   (note: for the purposes of this project, the "tool" is at root, and a placeholder "homepage" is at the "/home" route)
    [ ] individual donor: /[donor]
 
 2. Components:
 
-- [ ] DonationForm
+- [x] DonationForm
 - [ ] InventoryForm
 - [ ] Card (for mapping data)
-- [ ] Header
-- [ ] Footer
+- [x] Header
+- [x] Footer
+- [ ] ToolNav
 
 3. Feature Branches:
 
@@ -19,7 +21,7 @@
 - [x] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
 - [ ] Feature: Reports
-- [ ] styling
+- [x] styling
 - [ ] testing
 <!-- - [ ] database (wishlist item) -->
 
@@ -52,6 +54,8 @@
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation
 - [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
+- [ ] add nav in or below site header for page navigation through the various components ->
+- [ ] implement component `ToolNav.svelte`
 
 ## Branch: `feature/reports`
 
