@@ -6,15 +6,10 @@
 </script>
 
 <div>
-  <h1>the Sound Community Shelter</h1>
-  <p>donations management tool</p>
-
   <DonationForm {form} {data} />
 
-  <main>
-    {#each data.feed as donor (donor.id)}
-      <p>{donor.name}</p>
-      <p>{donor.email}</p>
-    {/each}
-  </main>
+  {#each data.feed as donor (donor.id)}
+    <p>{donor.name}</p>
+    <p>{donor.email}</p>
+  {/each}
 </div>

@@ -6,8 +6,8 @@
 
 2. Components:
 
-- [ ] DonorForm
 - [ ] DonationForm
+- [ ] InventoryForm
 - [ ] Card (for mapping data)
 - [ ] Header
 - [ ] Footer
@@ -16,7 +16,7 @@
 
 - [x] boilerplate, installs and dummy data
 - [x] databaset setup with Prisma and SQLite
-- [ ] Feature: Record Donations
+- [x] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
 - [ ] Feature: Reports
 - [ ] styling
@@ -33,7 +33,7 @@
 
 ## Branch: `feature/record-donations`
 
-- [x] implement `DonorForm.svelte` by adding component content
+- [x] implement `DonationForm.svelte` by adding component content
 - [x] Select type from dropdown in DonorForm
 - [x] be able to submit donor name, type, amount, date to data storage:
 - [x] this creates a "donation instance" under a donor's name (data does not persist, needs troubleshooting)
@@ -46,8 +46,8 @@
 
 ## Branch: `feature/adjust-inventory`
 
-- [ ] implement `DonationForm.svelte` by adding component content
-- [ ] Select type from dropdown in DonationForm
+- [ ] implement `InventoryForm.svelte` by adding component content
+- [ ] Select type from dropdown in InventoryForm
 - [ ] be able to add date, amount, and type record to "total donations" data
 - [ ] this creates an "inventory adjustment record" and changes a donation type's data
 - [ ] logic to change total of selected type of donation
@@ -66,11 +66,21 @@
 - [ ] be able to print out their record
 - [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
+## Branch: `feature/styling`
+
+- [ ] sass installs
+- [ ] sass file and folder setup
+- [ ] tokens file implementation
+- [ ] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
+- [ ] attribution for images
+
 Wishlist:
-add dayjs or similar library to offer current date selection in form
-Admin view, ability to add things like new types of donations to the Select dropdown
-Login or Oauth, so only shelter employees and volunteers can access the information
-(Admin would be able to add and remove people's access)
+
+- [ ] add dayjs or similar library to offer current date selection in form
+- [ ] Admin view, ability to add things like new types of donations to the Select dropdown
+- [ ] Login or Oauth, so only shelter employees and volunteers can access the information
+      (Admin would be able to add and remove people's access)
 
 - [ ] the donor name text box auto-completes previous donors
-- [ ] start with the `DonorForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+- [ ] start with the `DonationForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
+- [ ] dark mode and light mode toggle

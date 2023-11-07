@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.site-header {
+  color: $site-header-color;
+  background-color: $site-header-background-color;
+  padding: $site-header-padding;
+
+  &__inner {
+    display: flex;
+    gap: $site-header-gap;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    & a {
+      text-decoration: none;
+    }
+    
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-medium-screens;
+    }
+  }
+}
+
+.hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: $flex-group-gap;
+
+  &__p {
+    color: $site-header-color;
+    font-size: $font-size-700;
+  }
+}

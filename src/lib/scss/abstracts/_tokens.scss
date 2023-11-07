@@ -1,0 +1,161 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
+
+$active-theme: $light;
+$enable-media-query-dark-mode: false;
+
+//--contextual--
+$color-text-default:  $color-primary-200;
+$color-background-default: $color-neutral-800;
+$color-text-interactive-default: $color-accent-200;
+$color-text-interactive-hover: $color-accent-300;
+$letter-spacing-loose: .025rem;
+
+$border-radius-1: $size-1;
+$border-radius-2: $size-2;
+
+$box-shadow-1: 0px 6px 5px rgb(0, 0, 0, 0.012),
+  0px 22px 18px rgb(0, 0, 0, 0.018), 0px 100px 80px rgb(0, 0, 0, 0.03);
+
+$box-shadow-2: 0px 6px 5px rgb(0, 0, 0, 0.016),
+  0px 22px 18px rgb(0, 0, 0, 0.024), 0px 100px 80px rgb(0, 0, 0, 0.04);
+
+$box-shadow-3: 0px 6px 5px rgb(0, 0, 0, 0.02), 0px 22px 18px rgb(0, 0, 0, 0.03),
+  0px 100px 80px rgb(0, 0, 0, 0.05);
+
+$box-shadow-4: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042),
+  0px 100px 80px rgb(0, 0, 0, 0.07);
+
+$box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
+  0px 100px 80px rgb(0, 0, 0, 0.1);
+//--body--
+$body-font-family: $font-family-accent;
+$body-font-size: $font-size-500;
+$body-font-weight: $font-weight-default;
+$body-line-height: 1.15;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
+
+//--layout--
+$grid-gap: $size-6;
+$flex-group-gap: $size-4;
+
+$section-padding-block: clamp(1.5rem, 5vh, 5rem);
+
+$container-min-margin-inline: $size-4;
+$container-max-width: 60rem;
+$container-max-width-narrow: 40rem;
+$container-max-width-wide: 75rem;
+
+//--headings--
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+$heading-color-default: $color-primary-200;
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-line-height: $body-line-height;
+$heading-text-transform: none;
+
+$heading-1-color: $heading-color-default;
+$heading-1-font-size: $font-size-800;
+$heading-2-color: $color-accent-100;
+$heading-2-font-size: $font-size-700;
+$heading-3-color: $heading-color-default;
+$heading-3-font-size: $font-size-600;
+
+//--buttons--
+$button-border: 0;
+$button-border-radius: $border-radius-2;
+$button-font-family: $body-font-family;
+$button-font-size: $font-size-500;
+$button-font-weight: $font-weight-medium;
+$button-line-height: $body-line-height;
+$button-padding: .25em .75em;
+$button-text-transform: uppercase;
+
+$button-primary-color: $color-primary-800;
+$button-primary-background:  $color-primary-300;
+$button-primary-border: 1px solid $color-primary-200;
+
+$button-primary-color-hover: $color-accent-100;
+$button-primary-background-hover: $color-primary-800;
+$button-primary-border-hover: 1px solid $color-primary-100;
+
+$button-primary-color-active: $color-accent-100;
+$button-primary-background-active: $color-primary-700;
+$button-primary-border-active: 1px solid $color-neutral-000;
+
+
+$button-accent-color: $body-text-color;
+$button-accent-background: $color-primary-700;
+$button-accent-color-hover: $color-primary-700;
+$button-accent-background-hover: $color-accent-100;
+
+$link-button-color: $body-text-color;
+$link-button-background-color: $body-background-color;
+$link-button-color-hover: $color-primary-300;
+
+
+//--components--
+$site-header-color: $color-accent-100;
+$site-header-background-color: $color-primary-900;
+$site-header-padding: $size-8 0;
+$site-header-gap: $size-8;
+$site-header-alignment: center;
+$site-header-jusitifcation-small-screens: space-evenly;
+$site-header-jusitifcation-medium-screens: space-between;
+
+$footer-background-color: $color-accent-900;
+$footer-text-color: $color-text-default;
+$footer-padding-block: 1rem;
+$footer-link-color: $link-color;
+$footer-link-color-hover: $link-color-hover;
+$footer-link-font-family: $font-family-base;
+$footer-link-text-decoration: none;
+$footer-fine-print: $font-size-300;
+$footer-fine-print-family: $body-font-family;
+
+$navigation-color: $site-header-color;
+$navigation-color-hover: $color-primary-300;
+$navigation-font-size: $font-size-400;
+$navigation-gap: $size-9;
+$navigation-link-text-decoration: none;
+$navigation-font-family: $body-font-family;
+$navigation-font-weight: $font-weight-semi-bold;
+
+//--images--
+$logo-size-default: 5rem;
+$logo-size-header: $logo-size-default;
+$logo-size-footer: $logo-size-default;
+$logo-fill-default: none;
+$logo-fill-header: $logo-fill-default;
+$logo-fill-footer: $logo-fill-default;
+
+//--forms--
+$form-label-color: $color-neutral-200;
+$form-label-font-family: $font-family-base;
+$form-label-font-weight: $font-weight-bold;
+$form-label-font-size: $body-font-size;
+
+$form-input-color: $color-neutral-600;
+$form-input-font-family: $body-font-family;
+$form-input-font-weight: $font-weight-semi-bold;
+$form-input-font-size: $body-font-size;
+$form-input-background-color: $color-neutral-100;
+$form-input-border-default: 3px solid $color-accent-700;
+$form-input-border-focus: 3px solid $color-primary-400;
+$form-input-padding: $size-3;
+$form-input-border-radius: $border-radius-1;
+
+$form-placeholder-color: $color-primary-300;
+$form-placeholder-font-family: $form-input-font-family;
+$form-placeholder-font-weight: $form-input-font-weight;
+$form-placeholder-font-size: $body-font-size;
+
+$form-border: 3px solid $color-accent-700;
+$form-border-radius: $border-radius-1;
+$form-background-color: $color-accent-900;
+$form-group-spacing: 0.5rem;

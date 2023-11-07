@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+.button {
+      display: inline-flex;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: $button-font-size;
+      text-transform: $button-text-transform;
+      font-weight: $button-font-weight;
+      padding: $button-padding;
+      border: $button-border;
+      border-radius: $button-border-radius;
+      transition: 100ms ease;
+  
+      &[data-type="primary"] {
+          background-color: $button-primary-background;
+          border: $button-primary-border;
+          color: $button-primary-color;
+      
+          &:is(:hover, :focus) {
+            background-color: $button-primary-background-hover;
+            border:$button-primary-border-hover;
+            color: $button-primary-color-hover;
+          }
+          &:is(:active) {
+            background: $button-primary-background-active;
+            border: $button-primary-border-active;
+            color: $button-primary-color-active;
+          }
+      }
+
+      &[data-type="accent"] {
+        background-color: $body-background-color;
+        color: $button-accent-color;
+        padding: $button-padding;
+
+        &:is(:hover, :focus) {
+          background-color: $button-accent-background-hover;
+          color: $link-button-color-hover;
+        }
+      }
+
+      &[data-type="link"] {
+        background-color: $body-background-color;
+        color: $link-button-color;
+        
+        &:is(:hover, :focus) {
+          background-color: $link-button-background-color;
+          color: $link-button-color-hover;
+        }
+      } 
+}
+
