@@ -23,7 +23,7 @@
   </div>
   <div class="section">
     <div class="container">
-      <InventoryForm />
+      <InventoryForm {form} {data} />
     </div>
   </div>
   <div class="section inventory-totals-container">

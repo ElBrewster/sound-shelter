@@ -2,6 +2,9 @@
 <script lang="ts">
   import { enhance } from "$app/forms";
 
+  export let data;
+  export let form;
+
   let categories = [
     "",
     "bedding",
