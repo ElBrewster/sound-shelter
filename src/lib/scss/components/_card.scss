@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.donor-card {
+    border: 1px solid $color-neutral-700;
+    display: flex;
+    flex-direction: column;
+    margin-block: .5rem;
+    &__profile {
+        background-color: $color-accent-200;
+        padding: .5rem;
+    }
+
+    &__inner {
+        border-top: 1px solid $color-neutral-700;
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+    }
+    &__list-item {
+        border-bottom: 1px solid $color-accent-500;
+        flex-basis: fit-content;
+        padding: .5rem;
+        justify-content: space-between;
+        min-width: 22ch;
+    }
+}
