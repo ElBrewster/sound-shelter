@@ -36,7 +36,7 @@
   }
 </script>
 
-<div class="form-container">
+<div class="form-container" id="newDonation">
   <h2 class="heading-2">Record Incoming Donation:</h2>
 
   <form class="donation-form" method="post" use:enhance={handleSubmit}>

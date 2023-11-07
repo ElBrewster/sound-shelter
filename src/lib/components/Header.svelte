@@ -15,7 +15,11 @@
         </a>
       </hgroup>
       <div>
-        <img class="logo" {src} alt="svelte icon" />
+        <img
+          class="logo"
+          {src}
+          alt="city icon with cloudsd and tall colorful buildings"
+        />
       </div>
     </div>
   </div>

@@ -2,11 +2,13 @@
   /** @type {import('./$types').LayoutData} */
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/Header.svelte";
+  import ToolNav from "$lib/components/ToolNav.svelte";
   import "$lib/scss/main.scss";
 </script>
 
 <div class="body-layout">
   <Header />
+  <ToolNav />
   <main class="flex-fill">
     <div class="section">
       <div class="container">
