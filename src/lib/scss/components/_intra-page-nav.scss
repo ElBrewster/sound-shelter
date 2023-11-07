@@ -1,10 +1,12 @@
 @use "../abstracts" as *;
-
-.nav {
+.intra-page-nav {
+    background-color: $footer-background-color;
+    border-top: $intra-page-nav-border-top;
   --flex-column-gap: #{$navigation-gap};
   list-style: none;
   font-family: $navigation-font-family;
   font-weight: $navigation-font-weight;
+  padding-block: $footer-padding-block;
   text-decoration: none;
   
   a {

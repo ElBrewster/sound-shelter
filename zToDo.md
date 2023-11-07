@@ -59,6 +59,7 @@
 
 ## Branch: `feature/reports`
 
+- [ ] add `Card.svelte` component implementation to display records, both for donation totals and donors
 - [ ] add logic to change our data for a donation type total based on new submission
 - [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 - [ ] GET inventory (totals)
@@ -72,9 +73,9 @@
 
 ## Branch: `feature/styling`
 
-- [ ] sass installs
-- [ ] sass file and folder setup
-- [ ] tokens file implementation
+- [x] sass installs
+- [x] sass file and folder setup
+- [x] tokens file implementation
 - [ ] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
 - [ ] attribution for images
 

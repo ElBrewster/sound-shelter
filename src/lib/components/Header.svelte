@@ -3,7 +3,7 @@
   //   update this^ icon to fit theme
 </script>
 
-<header class="site-header">
+<header class="site-header" data-type="wide">
   <div class="container">
     <div class="site-header__inner">
       <hgroup class="hgroup">
