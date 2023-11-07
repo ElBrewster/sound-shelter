@@ -12,7 +12,7 @@
 <div>
   <ToolNav />
   <div class="section">
-    <div class="container">
+    <div class="container" data-type="narrow">
       <DonationForm {form} {data} />
     </div>
   </div>
@@ -24,23 +24,26 @@
   </div>
 
   <div class="section">
-    <div class="container">
+    <div class="container" data-type="narrow">
       <InventoryForm {form} {data} />
     </div>
   </div>
 
   <div class="section inventory-totals-container">
-    <div class="container even-columns flow">
+    <div class="container even-columns" data-type="narrow">
       <InventoryTotals {data} />
       <div>
-        <h2 class="heading-3">RECENT DISTRIBUTIONS</h2>
-        {#each data.distributions as distribution}
-          <div class="flex-group">
-            <p>{distribution.category}</p>
-            <p>{distribution.amount} units</p>
-            <p>{distribution.date}</p>
-          </div>
-        {/each}
+        <h2 class="heading-3 padding-block-end-4">RECENT DISTRIBUTIONS</h2>
+        <div class="flow">
+          {#each data.distributions as distribution}
+            <div class="flex-group">
+              <p>{distribution.category}</p>
+              <p>{distribution.amount} units</p>
+              <p>{distribution.date}</p>
+            </div>
+            <hr />
+          {/each}
+        </div>
       </div>
     </div>
   </div>
