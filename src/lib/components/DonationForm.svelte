@@ -40,7 +40,12 @@
 <div class="form-container flow" id="newDonation">
   <h2 class="heading-2">Record Incoming Donation:</h2>
 
-  <form class="donation-form" method="post" use:enhance={handleSubmit}>
+  <form
+    class="donation-form"
+    method="post"
+    use:enhance={handleSubmit}
+    action="?/donationCreate"
+  >
     <div class="donation-form__input-container">
       <label for="category">donation category:</label>
       <select name="category" id="category" bind:value={selected} required>

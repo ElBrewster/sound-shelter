@@ -26,7 +26,12 @@
 
 <div class="form-container flow" id="inventory">
   <h2 class="heading-2">Record Donation Distribution:</h2>
-  <form class="inventory-form" method="post" use:enhance={handleSubmit}>
+  <form
+    class="inventory-form"
+    method="post"
+    use:enhance={handleSubmit}
+    action="?/inventoryAdjust"
+  >
     <div class="inventory-form__input-container">
       <label for="category">donation category:</label>
       <select name="category" id="category" bind:value={selected} required>
