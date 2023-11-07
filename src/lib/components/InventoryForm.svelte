@@ -17,10 +17,10 @@
     "toiletries",
   ];
   let selected;
-  let amount = 1;
+  let total = 1;
   let date;
   function handleSubmit() {
-    console.log(`We used ${amount} ${selected} on ${date}.`);
+    console.log(`We used ${total} ${selected} on ${date}.`);
   }
 </script>
 
@@ -53,13 +53,13 @@
       />
     </div>
     <div class="inventory-form__input-container">
-      <label for="amount">donation amount: </label>
-      <input type="range" bind:value={amount} min="1" max="1000" />
+      <label for="total">donation total: </label>
+      <input type="range" bind:value={total} min="1" max="1000" />
       <input
-        name="amount"
-        id="amount"
+        name="total"
+        id="total"
         type="number"
-        bind:value={amount}
+        bind:value={total}
         min="1"
         max="1000"
       />
@@ -77,5 +77,5 @@
 
 {#if form?.success}
   <p>Thanks for keeping track of our stuff!</p>
-  <p>Successfully adjusted ${selected} totals to ${amount}</p>
+  <p>Successfully adjusted ${selected} totals to ${total}</p>
 {/if}
