@@ -3,7 +3,7 @@
 <script lang="ts">
   import { enhance } from "$app/forms";
 
-  //import donor name data for autocomplete of donor input field?
+  //wishlist: import donor name data for autocomplete of donor input field?
 
   export let data;
   export let form;

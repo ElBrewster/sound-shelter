@@ -49,10 +49,10 @@
 ## Branch: `feature/adjust-inventory`
 
 - [ ] implement `InventoryForm.svelte` by adding component content
-- [ ] Select type from dropdown in InventoryForm
-- [ ] be able to add date, amount, and type record to "total donations" data
-- [ ] this creates an "inventory adjustment record" and changes a donation type's data
-- [ ] logic to change total of selected type of donation
+- [ ] Select category from dropdown in InventoryForm
+- [ ] be able to add date, amount, and category record to "total donations" data
+- [ ] this creates an "inventory adjustment record" and changes a donation category's data
+- [ ] logic to change total of selected category of donation
 - [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
 - [x] add nav in or below site header for page navigation through the various components ->
 - [x] implement component `ToolNav.svelte`

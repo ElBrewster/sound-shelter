@@ -1,14 +1,17 @@
 @use "../abstracts" as *;
 
+.inventory-form,
 .donation-form {
   background-color: $form-background-color;
   border: $form-border;
   border-radius: $form-border-radius;
   box-shadow: $box-shadow-1;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: grid-gap;
   padding: 1rem;
   max-width: 50ch;
+
   &__input-container {
     display: flex;
     justify-content: space-between;
