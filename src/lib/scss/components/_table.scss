@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+table {
+    // background-color: $color-accent-800;
+    border: 3px solid $color-accent-900;
+
+    border-radius: $border-radius-1;
+    border-spacing: 3px;
+    padding: .5rem;
+}
+thead {
+    background-color: $color-accent-300;
+}
+
+th,
+td {
+    border: 1px solid $color-accent-900;
+    padding: 5px;
+}
+
+td {
+    background-color: $color-accent-100;
+}

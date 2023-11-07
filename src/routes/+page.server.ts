@@ -10,6 +10,7 @@ export const load: PageServerLoad = async () => {
     const response = await prisma.donor.findMany();
     const response2 = await prisma.donation.findMany();
     const response3 = await prisma.distribution.findMany();
+    console.log("data.distributions: ", response3)
     return {donors: response, donations: response2, distributions: response3};
 };
 

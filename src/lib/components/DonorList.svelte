@@ -5,7 +5,7 @@
 </script>
 
 <div id="donorList">
-  <p>donators</p>
+  <h2 class="heading-3">DONATORS</h2>
   {#each data.donors as donor (donor.id)}
     <p>{donor.name}</p>
     <p>{donor.email}</p>
