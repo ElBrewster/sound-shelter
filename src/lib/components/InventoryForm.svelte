@@ -74,3 +74,8 @@
     </div>
   </form>
 </div>
+
+{#if form?.success}
+  <p>Thanks for keeping track of our stuff!</p>
+  <p>Successfully adjusted ${selected} totals to ${amount}</p>
+{/if}
