@@ -14,8 +14,9 @@ export const load: PageServerLoad = async () => {
 export const actions: Actions = {
     donationCreate: async({request}) => {
         const data = Object.fromEntries(await request.formData());
-        const {category, amount, date, donor, email} = data;
-        console.log("From formData: ", category, amount, date, donor, email);
+        const {category, total, date, donor, email} = data;
+        console.log("From formData: ", category, total, date, donor, email);
+        let amount = Number(total);
         // if (!amount || !category || !date || !donor || !email) {
         //     return fail(400, {amount, category, date, donor, missing: true});
         // }

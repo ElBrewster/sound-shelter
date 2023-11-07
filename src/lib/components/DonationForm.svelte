@@ -20,19 +20,19 @@
   ];
 
   let selected;
-  let name = "donor";
-  let amount = 1;
+  let name = "Leona";
+  let total = 1;
   let date;
-  let email;
-  let phone;
+  let email = "leona.s.stevents@comcast.net";
+  let phone = "303-777-8888";
   let anonymous = false;
 
   function handleSubmit() {
     if (!anonymous) {
-      console.log(`You've added ${amount} ${selected} from ${name}.`);
+      console.log(`You've added ${total} ${selected} from ${name}.`);
     } else {
       name = "anonymous";
-      console.log(`You've added ${amount} ${selected} from an ${name} donor.`);
+      console.log(`You've added ${total} ${selected} from an ${name} donor.`);
     }
   }
 </script>
@@ -67,13 +67,13 @@
       />
     </div>
     <div class="donation-form__input-container">
-      <label for="amount">donation amount: </label>
-      <input type="range" bind:value={amount} min="1" max="1000" />
+      <label for="total">donation total: </label>
+      <input type="range" bind:value={total} min="1" max="1000" />
       <input
-        name="amount"
-        id="amount"
+        name="total"
+        id="total"
         type="number"
-        bind:value={amount}
+        bind:value={total}
         min="1"
         max="1000"
       />
@@ -127,6 +127,6 @@
     <p>Email: {email}</p>
     <p>Date: {date}</p>
     <p>Category: {selected}</p>
-    <p>Amount: {amount}</p>
+    <p>total: {total}</p>
   {/if}
 </div> -->
