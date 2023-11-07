@@ -8,7 +8,7 @@
 2. Components:
 
 - [x] DonationForm
-- [ ] InventoryForm
+- [x] InventoryForm
 - [ ] Card (for mapping data)
 - [x] Header
 - [x] Footer
@@ -48,10 +48,10 @@
 
 ## Branch: `feature/adjust-inventory`
 
-- [ ] implement `InventoryForm.svelte` by adding component content
-- [ ] Select category from dropdown in InventoryForm
-- [ ] be able to add date, amount, and category record to "total donations" data
-- [ ] this creates an "inventory adjustment record" and changes a donation category's data
+- [x] implement `InventoryForm.svelte` by adding component content
+- [x] Select category from dropdown in InventoryForm
+- [x] be able to add date, amount, and category record to "total donations" data
+- [x] this creates an "inventory adjustment record" and changes a donation category's data (POST trouble still with INT type error)
 - [ ] logic to change total of selected category of donation
 - [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
 - [x] add nav in or below site header for page navigation through the various components ->
