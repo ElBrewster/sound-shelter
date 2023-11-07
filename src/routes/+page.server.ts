@@ -8,7 +8,9 @@ import { fail, redirect } from "@sveltejs/kit";
 
 export const load: PageServerLoad = async () => {
     const response = await prisma.donor.findMany();
-    return {feed: response};
+    const response2 = await prisma.donation.findMany();
+    const response3 = await prisma.distribution.findMany();
+    return {donors: response, donations: response2, distributions: response3};
 };
 
 export const actions: Actions = {

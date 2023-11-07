@@ -28,7 +28,7 @@
   </div>
   <div class="section inventory-totals-container">
     <div class="container">
-      <InventoryTotals />
+      <InventoryTotals {data} />
     </div>
   </div>
 </div>

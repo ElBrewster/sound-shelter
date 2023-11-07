@@ -6,7 +6,7 @@
 
 <div id="donorList">
   <p>donators</p>
-  {#each data.feed as donor (donor.id)}
+  {#each data.donors as donor (donor.id)}
     <p>{donor.name}</p>
     <p>{donor.email}</p>
   {/each}

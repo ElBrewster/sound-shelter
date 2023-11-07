@@ -19,7 +19,7 @@
 - [x] boilerplate, installs and dummy data
 - [x] databaset setup with Prisma and SQLite
 - [x] Feature: Record Donations
-- [ ] Feature: Adjust Inventory
+- [x] Feature: Adjust Inventory
 - [ ] Feature: Reports
 - [x] styling
 - [ ] testing
@@ -64,7 +64,7 @@
 - [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 - [ ] GET inventory (totals)
 - [ ] display totals on homepage in a dashboard style
-- [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`
+- [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`: [refer to](https://learn.svelte.dev/tutorial/await-parent)
 - [ ] user should be able to navigate to that donor's page
 - [ ] from a homepage list of donors (wishlist: search bar to search donor names)
 - [ ] be able to view all donations from one user on their route,
