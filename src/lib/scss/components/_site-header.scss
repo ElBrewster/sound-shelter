@@ -12,7 +12,7 @@
     justify-content: $site-header-jusitifcation-small-screens;
     
     @include mq(medium) {
-      justify-content: $site-header-jusitifcation-large-screens;
+      justify-content: $site-header-jusitifcation-medium-screens;
     }
   }
 }
@@ -20,4 +20,9 @@
 .hgroup {
   display: flex;
   flex-direction: column;
+  gap: $flex-group-gap;
+  &__p {
+    color: $site-header-color;
+    font-size: $font-size-700;
+  }
 }
