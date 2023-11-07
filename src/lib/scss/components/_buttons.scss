@@ -33,7 +33,7 @@
         padding: $button-padding;
 
         &:is(:hover, :focus) {
-          background-color: $tile-background-color;
+          background-color: $button-accent-background-hover;
           color: $link-button-color-hover;
         }
       }

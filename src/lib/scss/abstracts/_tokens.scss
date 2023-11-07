@@ -7,11 +7,13 @@ $enable-media-query-dark-mode: false;
 
 //--contextual--
 $color-text-default:  $color-primary-200;
-$color-background-default: $color-neutral-850;
+$color-background-default: $color-neutral-800;
 $color-text-interactive-default: $color-primary-400;
 $color-text-interactive-hover: $color-primary-500;
 $letter-spacing-loose: .025rem;
 
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
 //--body--
 $body-font-family: $font-family-accent;
 $body-font-size: $font-size-500;
