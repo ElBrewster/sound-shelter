@@ -2,15 +2,17 @@
 
 1. Routes:
    [ ] homepage: /
+   (note: for the purposes of this project, the "tool" is at root, and a placeholder "homepage" is at the "/home" route)
    [ ] individual donor: /[donor]
 
 2. Components:
 
-- [ ] DonationForm
-- [ ] InventoryForm
+- [x] DonationForm
+- [x] InventoryForm
 - [ ] Card (for mapping data)
-- [ ] Header
-- [ ] Footer
+- [x] Header
+- [x] Footer
+- [x] ToolNav
 
 3. Feature Branches:
 
@@ -19,7 +21,7 @@
 - [x] Feature: Record Donations
 - [ ] Feature: Adjust Inventory
 - [ ] Feature: Reports
-- [ ] styling
+- [x] styling
 - [ ] testing
 <!-- - [ ] database (wishlist item) -->
 
@@ -46,15 +48,18 @@
 
 ## Branch: `feature/adjust-inventory`
 
-- [ ] implement `InventoryForm.svelte` by adding component content
-- [ ] Select type from dropdown in InventoryForm
-- [ ] be able to add date, amount, and type record to "total donations" data
-- [ ] this creates an "inventory adjustment record" and changes a donation type's data
-- [ ] logic to change total of selected type of donation
+- [x] implement `InventoryForm.svelte` by adding component content
+- [x] Select category from dropdown in InventoryForm
+- [x] be able to add date, amount, and category record to "total donations" data
+- [x] this creates an "inventory adjustment record" and changes a donation category's data (POST trouble still with INT type error)
+- [ ] logic to change total of selected category of donation
 - [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
+- [x] add nav in or below site header for page navigation through the various components ->
+- [x] implement component `ToolNav.svelte`
 
 ## Branch: `feature/reports`
 
+- [ ] add `Card.svelte` component implementation to display records, both for donation totals and donors
 - [ ] add logic to change our data for a donation type total based on new submission
 - [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
 - [ ] GET inventory (totals)
@@ -68,9 +73,9 @@
 
 ## Branch: `feature/styling`
 
-- [ ] sass installs
-- [ ] sass file and folder setup
-- [ ] tokens file implementation
+- [x] sass installs
+- [x] sass file and folder setup
+- [x] tokens file implementation
 - [ ] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
 - [ ] attribution for images
 

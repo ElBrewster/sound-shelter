@@ -8,11 +8,7 @@
 <div class="body-layout">
   <Header />
   <main class="flex-fill">
-    <div class="section">
-      <div class="container">
-        <slot />
-      </div>
-    </div>
+    <slot />
   </main>
   <Footer />
 </div>

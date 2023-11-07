@@ -3,7 +3,7 @@
   //   update this^ icon to fit theme
 </script>
 
-<header class="site-header">
+<header class="site-header" data-type="wide">
   <div class="container">
     <div class="site-header__inner">
       <hgroup class="hgroup">
@@ -15,7 +15,11 @@
         </a>
       </hgroup>
       <div>
-        <img class="logo" {src} alt="svelte icon" />
+        <img
+          class="logo"
+          {src}
+          alt="city icon with cloudsd and tall colorful buildings"
+        />
       </div>
     </div>
   </div>

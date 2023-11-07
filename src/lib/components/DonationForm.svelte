@@ -1,7 +1,8 @@
+<!-- donation registration -->
 <script lang="ts">
   import { enhance } from "$app/forms";
 
-  //import donor name data for autocomplete of donor input field?
+  //wishlist: import donor name data for autocomplete of donor input field?
 
   export let data;
   export let form;
@@ -36,10 +37,15 @@
   }
 </script>
 
-<div class="form-container">
+<div class="form-container flow" id="newDonation">
   <h2 class="heading-2">Record Incoming Donation:</h2>
 
-  <form class="donation-form" method="post" use:enhance={handleSubmit}>
+  <form
+    class="donation-form"
+    method="post"
+    use:enhance={handleSubmit}
+    action="?/donationCreate"
+  >
     <div class="donation-form__input-container">
       <label for="category">donation category:</label>
       <select name="category" id="category" bind:value={selected} required>
@@ -47,18 +53,6 @@
           <option value={category}>{category}</option>
         {/each}
       </select>
-    </div>
-    <div class="donation-form__input-container">
-      <label for="amount">donation amount: </label>
-      <input
-        name="amount"
-        id="amount"
-        type="number"
-        bind:value={amount}
-        min="1"
-        max="1000"
-      />
-      <input type="range" bind:value={amount} min="1" max="1000" />
     </div>
     <div class="donation-form__input-container">
       <label for="date">donation date: </label>
@@ -73,8 +67,21 @@
       />
     </div>
     <div class="donation-form__input-container">
+      <label for="amount">donation amount: </label>
+      <input type="range" bind:value={amount} min="1" max="1000" />
+      <input
+        name="amount"
+        id="amount"
+        type="number"
+        bind:value={amount}
+        min="1"
+        max="1000"
+      />
+    </div>
+    <div class="donation-form__input-container">
       <label for="anonymous"> anonymous donation? </label>
       <input
+        class="checkbox"
         name="anonymous"
         id="anonymous"
         type="checkbox"
@@ -100,7 +107,7 @@
         {form.error}
       </div>
     {/if}
-    <div>
+    <div class="padding-inline-4">
       <button
         class="button"
         disabled={!selected}

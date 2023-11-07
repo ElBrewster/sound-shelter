@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.inventory-totals-container,
+.donor-list-container {
+    background-color: $color-neutral-200;
+    color: $color-neutral-800;
+}

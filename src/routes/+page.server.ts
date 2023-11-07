@@ -12,7 +12,7 @@ export const load: PageServerLoad = async () => {
 };
 
 export const actions: Actions = {
-    async default({request}) {
+    donationCreate: async({request}) => {
         const data = Object.fromEntries(await request.formData());
         const {category, amount, date, donor, email} = data;
         console.log("From formData: ", category, amount, date, donor, email);
@@ -37,5 +37,13 @@ export const actions: Actions = {
     
         return {message: `You've added ${data.amount} of ${data.category} from ${data.donor} to our database.`}
         // throw redirect(303, `/`);
+    },
+    
+    inventoryAdjust: async({request}) => {
+        const data = Object.fromEntries(await request.formData());
+        const {category, amount, date} = data;
+        console.log("inventory adjustment form data: ", category, date, amount);
+        return {message: `You've added to our database.`}
+
     }
 };
