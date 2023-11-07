@@ -1,3 +1,5 @@
+<!-- donation registration -->
+
 <script lang="ts">
   import { enhance } from "$app/forms";
 

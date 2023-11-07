@@ -1,5 +1,8 @@
 <script lang="ts">
   import DonationForm from "$lib/components/DonationForm.svelte";
+  import DonorList from "$lib/components/DonorList.svelte";
+  import InventoryForm from "$lib/components/InventoryForm.svelte";
+  import InventoryTotals from "$lib/components/InventoryTotals.svelte";
   import ToolNav from "$lib/components/ToolNav.svelte";
 
   export let form;
@@ -13,9 +16,19 @@
       <DonationForm {form} {data} />
     </div>
   </div>
-
-  {#each data.feed as donor (donor.id)}
-    <p>{donor.name}</p>
-    <p>{donor.email}</p>
-  {/each}
+  <div class="section">
+    <div class="container">
+      <InventoryForm />
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <DonorList {data} />
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <InventoryTotals />
+    </div>
+  </div>
 </div>
