@@ -36,16 +36,17 @@
   }
 </script>
 
-<form method="post" use:enhance={handleSubmit}>
-  <label for="category">Pick a donation category:</label>
-  <select name="category" id="category" bind:value={selected} required>
-    {#each categories as category}
-      <option value={category}>{category}</option>
-    {/each}
-  </select>
-
-  <label for="amount"
-    >How many?
+<form class="donation-form" method="post" use:enhance={handleSubmit}>
+  <div class="donation-form__input-container">
+    <label for="category">donation category:</label>
+    <select name="category" id="category" bind:value={selected} required>
+      {#each categories as category}
+        <option value={category}>{category}</option>
+      {/each}
+    </select>
+  </div>
+  <div class="donation-form__input-container">
+    <label for="amount">donation amount: </label>
     <input
       name="amount"
       id="amount"
@@ -55,10 +56,9 @@
       max="1000"
     />
     <input type="range" bind:value={amount} min="1" max="1000" />
-  </label>
-
-  <label for="date"
-    >When was the donation made?
+  </div>
+  <div class="donation-form__input-container">
+    <label for="date">donation date: </label>
     <input
       name="date"
       id="date"
@@ -68,37 +68,43 @@
       max="2024-01-30"
       required
     />
-  </label>
-
-  <label for="anonymous">
-    Check for anonymous donation
+  </div>
+  <div class="donation-form__input-container">
+    <label for="anonymous"> anonymous donation? </label>
     <input
       name="anonymous"
       id="anonymous"
       type="checkbox"
       bind:checked={anonymous}
     />
-  </label>
-
-  <!-- need logic to remove name/email for anonymous donor:  -->
-  <label for="donor"
-    >donor name
+  </div>
+  <div class="donation-form__input-container">
+    <label for="donor">donor name: </label>
     <input name="donor" id="donor" type="text" bind:value={name} />
-  </label>
-
-  <label for="email"
-    >contact info:
+  </div>
+  <!-- need logic to remove name/email for anonymous donor:  -->
+  <div class="donation-form__input-container">
+    <label for="email">donor contact email: </label>
     <input name="email" id="email" type="email" bind:value={email} />
-  </label>
-  <input name="phone" type="tel" bind:value={phone} />
+  </div>
+  <div class="donation-form__input-container">
+    <label for="phone"> donor contact number: </label>
+    <input name="phone" type="tel" bind:value={phone} />
+  </div>
 
   {#if form?.error}
     <div>
       {form.error}
     </div>
   {/if}
-
-  <button disabled={!selected} type="submit">submit</button>
+  <div>
+    <button
+      class="button"
+      disabled={!selected}
+      type="submit"
+      data-type="primary">submit</button
+    >
+  </div>
 </form>
 
 {#if form?.message}
