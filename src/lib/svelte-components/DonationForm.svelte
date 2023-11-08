@@ -1,7 +1,17 @@
 <!-- donation registration -->
 <script lang="ts">
   import { enhance } from "$app/forms";
-
+  import { get } from "svelte/store";
+  import {
+    beddingCount,
+    cashCount,
+    clothingCount,
+    foodCount,
+    medicalCount,
+    otherCount,
+    petSuppliesCount,
+    toiletriesCount,
+  } from "../svelte-stores/store";
   //wishlist: import donor name data for autocomplete of donor input field?
 
   export let data;
@@ -27,12 +37,50 @@
   let phone = "303-777-8888";
   let anonymous = false;
 
+  function updateInventoryCount(category, num) {
+    console.log("update inventory count with donation: ", category, num);
+    switch (category) {
+      case "bedding":
+        beddingCount.update((n) => (n = n + num));
+        console.log("beddingCount: ", get(beddingCount));
+        break;
+      case "cash":
+        cashCount.update((n) => n + num);
+        console.log("cashCount: ", get(cashCount));
+        break;
+      case "clothing":
+        clothingCount.update((n) => n + num);
+        console.log("clothingCount: ", get(clothingCount));
+        break;
+      case "food":
+        foodCount.update((n) => n + num);
+        console.log("foodCount: ", get(foodCount));
+        break;
+      case "medical":
+        medicalCount.update((n) => n + num);
+        console.log("medicalCount: ", get(medicalCount));
+        break;
+      case "pet supplies":
+        petSuppliesCount.update((n) => n + num);
+        console.log("petSuppliesCount: ", get(petSuppliesCount));
+        break;
+      case "toiletries":
+        toiletriesCount.update((n) => n + num);
+        console.log("toiletriesCount: ", get(toiletriesCount));
+      default:
+        otherCount.update((n) => n + num);
+        console.log("otherCount: ", get(otherCount));
+    }
+  }
+
   function handleSubmit() {
     if (!anonymous) {
       console.log(`You've added ${total} ${selected} from ${name}.`);
+      updateInventoryCount(selected, total);
     } else {
       name = "anonymous";
       console.log(`You've added ${total} ${selected} from an ${name} donor.`);
+      updateInventoryCount(selected, total);
     }
   }
 </script>

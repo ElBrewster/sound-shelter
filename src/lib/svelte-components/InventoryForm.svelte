@@ -32,7 +32,7 @@
   let date;
 
   function updateInventoryCount(category, num) {
-    console.log("update inventory count: ", category, num);
+    console.log("update inventory count with distribution: ", category, num);
     switch (category) {
       case "bedding":
         beddingCount.update((n) => (n = n - num));

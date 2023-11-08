@@ -1,6 +1,7 @@
 <!-- inventory report -->
 <!-- current status of donations, grouped by type -->
 <script>
+  import { browser } from "$app/environment";
   import {
     beddingCount,
     cashCount,
@@ -27,6 +28,7 @@
         <th colspan="2" class="heading-3">INVENTORY STATUS</th>
       </tr>
     </thead>
+    <!-- {#if !browser} -->
     <tbody>
       <tr>
         <td>bedding</td>
@@ -61,5 +63,6 @@
         <td>{$toiletriesCount} units</td>
       </tr>
     </tbody>
+    <!-- {/if} -->
   </table>
 </div>

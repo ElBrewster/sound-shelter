@@ -23,6 +23,8 @@
 
 [Svelte named slots](https://learn.svelte.dev/tutorial/named-slots)
 [Svelte slot props](https://learn.svelte.dev/tutorial/slot-props)
+[Svelte store persist data](https://stackoverflow.com/questions/56488202/how-to-persist-svelte-store)
+[Svelte store with localstorage](https://github.com/higsch/higsch.me/blob/master/content/post/2019-06-21-svelte-local-storage.md)
 
 ## Stackblitz
 
