@@ -17,7 +17,6 @@
   function displayTotals() {
     console.log("data.distributions: ", data.distributions);
     //need to add logic to keep track of running totals based on database, and recent form submissions.
-    //don't want to display category repeats, so how to avoid that?
   }
 </script>
 

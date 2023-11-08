@@ -14,6 +14,7 @@
   import InventoryForm from "$lib/svelte-components/InventoryForm.svelte";
   import InventoryTotals from "$lib/svelte-components/InventoryTotals.svelte";
   import ToolNav from "$lib/svelte-components/ToolNav.svelte";
+  import RecentDistributions from "$lib/svelte-components/RecentDistributions.svelte";
 
   export let form;
   export let data;
@@ -69,24 +70,7 @@
   <div class="section inventory-totals-container">
     <div class="container even-columns" data-type="narrow">
       <InventoryTotals {data} />
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th colspan="3" class="heading-3">RECENT DISTRIBUTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {#each data.distributions as distribution}
-              <tr>
-                <td>{distribution.category}</td>
-                <td>{distribution.amount} units</td>
-                <td>{distribution.date}</td>
-              </tr>
-            {/each}
-          </tbody>
-        </table>
-      </div>
+      <RecentDistributions {data} />
     </div>
   </div>
 </div>

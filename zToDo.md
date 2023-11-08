@@ -75,8 +75,7 @@
 - [x] sass installs
 - [x] sass file and folder setup
 - [x] tokens file implementation
-- [ ] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
-- [ ] attribution for images
+- [x] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
 
 Wishlist:
 
@@ -88,3 +87,4 @@ Wishlist:
 
 - [ ] the donor name text box auto-completes previous donors
 - [ ] dark mode and light mode toggle
+- [ ] adding a new donor is an issue for the current data setup since our POST relies on a pre-existing donor in the databse
