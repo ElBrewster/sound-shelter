@@ -1,17 +1,18 @@
 # ToDo List and Project Breakdown
 
 1. Routes:
-   [ ] homepage: /
+   [x] homepage: /
    (note: for the purposes of this project, the "tool" is at root, and a placeholder "homepage" is at the "/home" route)
    [ ] individual donor: /[donor]
 
 2. Components:
 
 - [x] DonationForm
-- [x] InventoryForm
-- [ ] Card (for mapping data)
-- [x] Header
+- [x] DonorList
 - [x] Footer
+- [x] Header
+- [x] InventoryForm
+- [x] InventoryTotals
 - [x] ToolNav
 
 3. Feature Branches:
@@ -19,11 +20,10 @@
 - [x] boilerplate, installs and dummy data
 - [x] databaset setup with Prisma and SQLite
 - [x] Feature: Record Donations
-- [ ] Feature: Adjust Inventory
-- [ ] Feature: Reports
+- [x] Feature: Adjust Inventory
+- [x] Feature: Reports
 - [x] styling
 - [ ] testing
-<!-- - [ ] database (wishlist item) -->
 
 ## Branch: `feature/database-setup`
 
@@ -52,24 +52,23 @@
 - [x] Select category from dropdown in InventoryForm
 - [x] be able to add date, amount, and category record to "total donations" data
 - [x] this creates an "inventory adjustment record" and changes a donation category's data (POST trouble still with INT type error)
-- [ ] logic to change total of selected category of donation
-- [ ] eventually hook up the adjustments input to the Svelte store for the reports branch
+- [x] logic to change total of selected category of donation
+- [x] eventually hook up the adjustments input to the Svelte store for the reports branch
 - [x] add nav in or below site header for page navigation through the various components ->
 - [x] implement component `ToolNav.svelte`
 
 ## Branch: `feature/reports`
 
-- [ ] add `Card.svelte` component implementation to display records, both for donation totals and donors
-- [ ] add logic to change our data for a donation type total based on new submission
-- [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
-- [ ] GET inventory (totals)
-- [ ] display totals on homepage in a dashboard style
-- [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`
+- [x] add `DonorList.svelte` component implementation to display donation totals and donors
+- [x] add logic to change our data for a donation type total based on new submission
+- [x] GET inventory (totals)
+- [x] display totals on homepage in a dashboard style
+- [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`: [refer to](https://learn.svelte.dev/tutorial/await-parent)
 - [ ] user should be able to navigate to that donor's page
-- [ ] from a homepage list of donors (wishlist: search bar to search donor names)
+- [x] from a homepage list of donors
 - [ ] be able to view all donations from one user on their route,
 - [ ] be able to print out their record
-- [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
+- [x] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
 ## Branch: `feature/styling`
 
@@ -81,11 +80,11 @@
 
 Wishlist:
 
+- [ ] search bar to search donor names
 - [ ] add dayjs or similar library to offer current date selection in form
 - [ ] Admin view, ability to add things like new types of donations to the Select dropdown
 - [ ] Login or Oauth, so only shelter employees and volunteers can access the information
       (Admin would be able to add and remove people's access)
 
 - [ ] the donor name text box auto-completes previous donors
-- [ ] start with the `DonationForm.svelte` visible on the main page, and add conditional logic later if it makes sense (like click button to "record a donation" and then it populates a form in that location)
 - [ ] dark mode and light mode toggle

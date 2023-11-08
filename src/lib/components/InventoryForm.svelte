@@ -1,6 +1,17 @@
 <!-- donation distribution -->
 <script lang="ts">
   import { enhance } from "$app/forms";
+  import { get } from "svelte/store";
+  import {
+    beddingCount,
+    cashCount,
+    clothingCount,
+    foodCount,
+    medicalCount,
+    otherCount,
+    petSuppliesCount,
+    toiletriesCount,
+  } from "./stores/store";
 
   export let data;
   export let form;
@@ -17,10 +28,49 @@
     "toiletries",
   ];
   let selected;
-  let amount = 1;
+  let total = 1;
   let date;
+
+  function updateInventoryCount(category, num) {
+    console.log("update inventory count: ", category, num);
+    switch (category) {
+      case "bedding":
+        beddingCount.update((n) => (n = n - num));
+        console.log("beddingCount: ", get(beddingCount));
+        break;
+      case "cash":
+        cashCount.update((n) => n - num);
+        console.log("cashCount: ", get(cashCount));
+        break;
+      case "clothing":
+        clothingCount.update((n) => n - num);
+        console.log("clothingCount: ", get(clothingCount));
+        break;
+      case "food":
+        foodCount.update((n) => n - num);
+        console.log("foodCount: ", get(foodCount));
+        break;
+      case "medical":
+        medicalCount.update((n) => n - num);
+        console.log("medicalCount: ", get(medicalCount));
+        break;
+      case "pet supplies":
+        petSuppliesCount.update((n) => n - num);
+        console.log("petSuppliesCount: ", get(petSuppliesCount));
+        break;
+      case "toiletries":
+        toiletriesCount.update((n) => n - num);
+        console.log("toiletriesCount: ", get(toiletriesCount));
+      default:
+        otherCount.update((n) => n - num);
+        console.log("otherCount: ", get(otherCount));
+    }
+  }
+
   function handleSubmit() {
-    console.log(`We used ${amount} ${selected} on ${date}.`);
+    console.log(`We used ${total} ${selected} on ${date}.`);
+    //call totals update
+    updateInventoryCount(selected, total);
   }
 </script>
 
@@ -53,13 +103,13 @@
       />
     </div>
     <div class="inventory-form__input-container">
-      <label for="amount">donation amount: </label>
-      <input type="range" bind:value={amount} min="1" max="1000" />
+      <label for="total">donation total: </label>
+      <input type="range" bind:value={total} min="1" max="1000" />
       <input
-        name="amount"
-        id="amount"
+        name="total"
+        id="total"
         type="number"
-        bind:value={amount}
+        bind:value={total}
         min="1"
         max="1000"
       />
@@ -77,5 +127,5 @@
 
 {#if form?.success}
   <p>Thanks for keeping track of our stuff!</p>
-  <p>Successfully adjusted ${selected} totals to ${amount}</p>
+  <p>Successfully adjusted ${selected} totals to ${total}</p>
 {/if}

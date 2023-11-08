@@ -1,5 +1,66 @@
 <!-- inventory report -->
 <!-- current status of donations, grouped by type -->
+<script>
+  import {
+    beddingCount,
+    cashCount,
+    clothingCount,
+    foodCount,
+    medicalCount,
+    otherCount,
+    petSuppliesCount,
+    toiletriesCount,
+  } from "./stores/store";
+
+  export let data;
+
+  function displayTotals() {
+    console.log("data.distributions: ", data.distributions);
+    //need to add logic to keep track of running totals based on database, and recent form submissions.
+    //don't want to display category repeats, so how to avoid that?
+  }
+</script>
+
 <div id="donationList">
-  <p>inventory totals</p>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" class="heading-3">INVENTORY STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>bedding</td>
+        <td>{$beddingCount} units</td>
+      </tr>
+      <tr>
+        <td>cash</td>
+        <td>{$cashCount} units</td>
+      </tr>
+      <tr>
+        <td>clothing</td>
+        <td>{$clothingCount} units</td>
+      </tr>
+      <tr>
+        <td>food</td>
+        <td>{$foodCount} units</td>
+      </tr>
+      <tr>
+        <td>medical</td>
+        <td>{$medicalCount} units</td>
+      </tr>
+      <tr>
+        <td>other</td>
+        <td>{$otherCount} units</td>
+      </tr>
+      <tr>
+        <td>pet supplies</td>
+        <td>{$petSuppliesCount} units</td>
+      </tr>
+      <tr>
+        <td>toiletries</td>
+        <td>{$toiletriesCount} units</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

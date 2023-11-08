@@ -27,3 +27,7 @@
 ## Stackblitz
 
 [how to add prisma](https://stackblitz.com/edit/node-psqsqe?file=repro.js)
+
+## Wishlist Items
+
+[implementation for printing a page](https://developer.mozilla.org/en-US/docs/Web/Guide/Printing)

@@ -5,7 +5,7 @@
 </script>
 
 <div>
-  {#each data.feed as donation}
+  {#each data.donors as donation}
     <p>{donation.amount}</p>
   {/each}
 </div>
