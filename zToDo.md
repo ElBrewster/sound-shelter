@@ -1,5 +1,8 @@
 # ToDo List and Project Breakdown
 
+- [Branches](#branches) - [database setup](#branch-featuredatabase-setup) - [record donations](#branch-featurerecord-donations) - [inventory adjustments](#branch-featureadjust-inventory) - [reports](#branch-featurereports) - [styling](#branch-featurestyling) - [data on pageload + cleanup](#branch-featuredata-on-pageload)
+- [Wishlist](#wishlist)
+
 1. Routes:
    [x] homepage: /
    (note: for the purposes of this project, the "tool" is at root, and a placeholder "homepage" is at the "/home" route)
@@ -13,6 +16,7 @@
 - [x] Header
 - [x] InventoryForm
 - [x] InventoryTotals
+- [x] RecentDistributions
 - [x] ToolNav
 
 3. Feature Branches:
@@ -25,7 +29,11 @@
 - [x] styling
 - [ ] testing
 
-## Branch: `feature/database-setup`
+4. Wishlist
+
+## Branches:
+
+### Branch: `feature/database-setup`
 
 - [x] installs for SQLite and Prisma ORM
 - [x] TypeScript installs
@@ -33,20 +41,20 @@
 - [x] model for distributions
 - [x] seed database with `distributions.json` and `donors.json`
 
-## Branch: `feature/record-donations`
+### Branch: `feature/record-donations`
 
 - [x] implement `DonationForm.svelte` by adding component content
 - [x] Select type from dropdown in DonorForm
 - [x] be able to submit donor name, type, amount, date to data storage:
 - [x] this creates a "donation instance" under a donor's name (data does not persist, needs troubleshooting)
 
-### donor user stories:
+#### donor user stories:
 
 - Leonna from an urgent care clinic brought us surplus bandages
 - Delite Bakery brought 2-day-old bread and pastries
 - Scott from the community left us sleeping bags he collected from vetted sources
 
-## Branch: `feature/adjust-inventory`
+### Branch: `feature/adjust-inventory`
 
 - [x] implement `InventoryForm.svelte` by adding component content
 - [x] Select category from dropdown in InventoryForm
@@ -57,7 +65,7 @@
 - [x] add nav in or below site header for page navigation through the various components ->
 - [x] implement component `ToolNav.svelte`
 
-## Branch: `feature/reports`
+### Branch: `feature/reports`
 
 - [x] add `DonorList.svelte` component implementation to display donation totals and donors
 - [x] add logic to change our data for a donation type total based on new submission
@@ -70,14 +78,14 @@
 - [ ] be able to print out their record
 - [x] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
 
-## Branch: `feature/styling`
+### Branch: `feature/styling`
 
 - [x] sass installs
 - [x] sass file and folder setup
 - [x] tokens file implementation
 - [x] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
 
-## Branch: `feature/data-on-pageload`
+### Branch: `feature/data-on-pageload`
 
 - [ ] small cleanup tasks:
 - [ ] component refactors (new component `RecentDistributions`)
@@ -88,8 +96,10 @@
 - [ ] include abstract summarizing purpose of application,
 - [ ] and include screenshots showing the site on different device widths
 - [ ] refer to this todo list for history of project planning in the README,highlight wishlist
+- [ ] fix wonky donators reports, the styling and responsiveness is not on point
+- [ ] fix spacing between sections since jumping from one of the links in the toolbar nav navigates to an odd selection of sections, like 90% of the target and 20-30% of the next section, just needs cleanup
 
-Wishlist:
+## Wishlist:
 
 - [ ] search bar to search donor names
 - [ ] add dayjs or similar library to offer current date selection in form
