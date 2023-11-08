@@ -77,14 +77,26 @@
 - [x] tokens file implementation
 - [x] attribution for icons: `<a href="https://www.flaticon.com/free-icons/city" title="city icons">City icons created by Freepik - Flaticon</a>`
 
+## Branch: `feature/data-on-pageload`
+
+- [ ] small cleanup tasks:
+- [ ] component refactors (new component `RecentDistributions`)
+- [ ] ensure that InventoryTotals component is updated when first coming to the site with seeded database inventory
+- [ ] deploy app if easily done with database (check Vercel?)
+- [ ] write up README and include app setup instructions,
+- [ ] especially database setup terminal commands with prisma,
+- [ ] include abstract summarizing purpose of application,
+- [ ] and include screenshots showing the site on different device widths
+- [ ] refer to this todo list for history of project planning in the README,highlight wishlist
+
 Wishlist:
 
 - [ ] search bar to search donor names
 - [ ] add dayjs or similar library to offer current date selection in form
-- [ ] Admin view, ability to add things like new types of donations to the Select dropdown
-- [ ] Login or Oauth, so only shelter employees and volunteers can access the information
-      (Admin would be able to add and remove people's access)
-
+- [ ] prevent future date selections on donation submissions as well as inventory adjustments
+- [ ] finish out anonymous donor submissions on the incoming donations form (checkbox works but logic to post do an anonymous donor is not included in the `donationCreate` action function)
+- [ ] adding a new donor is an issue for the current data setup since our POST relies on a pre-existing donor in the databse
+- [ ] an Admin view would be practical, with the ability to add things like new types of donations to the Select dropdown, or to add/remove employee access however it is out of the scope of this project
+- [ ] Login or Oauth, so only shelter employees and volunteers can access the information (outside the scope of this project)
 - [ ] the donor name text box auto-completes previous donors
 - [ ] dark mode and light mode toggle
-- [ ] adding a new donor is an issue for the current data setup since our POST relies on a pre-existing donor in the databse
