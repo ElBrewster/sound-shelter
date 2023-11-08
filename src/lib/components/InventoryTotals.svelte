@@ -1,6 +1,17 @@
 <!-- inventory report -->
 <!-- current status of donations, grouped by type -->
 <script>
+  import {
+    beddingCount,
+    cashCount,
+    clothingCount,
+    foodCount,
+    medicalCount,
+    otherCount,
+    petSuppliesCount,
+    toiletriesCount,
+  } from "./stores/store";
+
   export let data;
 
   function displayTotals() {
@@ -18,12 +29,38 @@
       </tr>
     </thead>
     <tbody>
-      {#each data.distributions as distribution}
-        <tr>
-          <td>{distribution.category}</td>
-          <td>{distribution.amount} units</td>
-        </tr>
-      {/each}
+      <tr>
+        <td>bedding</td>
+        <td>{$beddingCount} units</td>
+      </tr>
+      <tr>
+        <td>cash</td>
+        <td>{$cashCount} units</td>
+      </tr>
+      <tr>
+        <td>clothing</td>
+        <td>{$clothingCount} units</td>
+      </tr>
+      <tr>
+        <td>food</td>
+        <td>{$foodCount} units</td>
+      </tr>
+      <tr>
+        <td>medical</td>
+        <td>{$medicalCount} units</td>
+      </tr>
+      <tr>
+        <td>other</td>
+        <td>{$otherCount} units</td>
+      </tr>
+      <tr>
+        <td>pet supplies</td>
+        <td>{$petSuppliesCount} units</td>
+      </tr>
+      <tr>
+        <td>toiletries</td>
+        <td>{$toiletriesCount} units</td>
+      </tr>
     </tbody>
   </table>
 </div>
