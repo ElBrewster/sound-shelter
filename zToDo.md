@@ -59,14 +59,14 @@
 
 ## Branch: `feature/reports`
 
-- [ ] add `Card.svelte` component implementation to display records, both for donation totals and donors
+- [x] add `DonorList.svelte` component implementation to display donation totals and donors
 - [ ] add logic to change our data for a donation type total based on new submission
 - [ ] eventually hook up the amount input to the Svelte store for the reports branch to display updates based on new input
-- [ ] GET inventory (totals)
-- [ ] display totals on homepage in a dashboard style
+- [x] GET inventory (totals)
+- [x] display totals on homepage in a dashboard style
 - [ ] GET a single donor's record, and `load` it on a dynamic route for that donor `/[donor-name]`: [refer to](https://learn.svelte.dev/tutorial/await-parent)
 - [ ] user should be able to navigate to that donor's page
-- [ ] from a homepage list of donors (wishlist: search bar to search donor names)
+- [x] from a homepage list of donors
 - [ ] be able to view all donations from one user on their route,
 - [ ] be able to print out their record
 - [ ] utilize a Svelte store to handle inventory totals display, so the total input can be updated in the Svelte store (immediately viewable in the UI)(this really involves all feature branches for core functionality)
@@ -81,6 +81,7 @@
 
 Wishlist:
 
+- [ ] search bar to search donor names
 - [ ] add dayjs or similar library to offer current date selection in form
 - [ ] Admin view, ability to add things like new types of donations to the Select dropdown
 - [ ] Login or Oauth, so only shelter employees and volunteers can access the information

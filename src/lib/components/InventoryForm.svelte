@@ -1,6 +1,17 @@
 <!-- donation distribution -->
 <script lang="ts">
   import { enhance } from "$app/forms";
+  import { get } from "svelte/store";
+  import {
+    beddingCount,
+    cashCount,
+    clothingCount,
+    foodCount,
+    medicalCount,
+    otherCount,
+    petSuppliesCount,
+    toiletriesCount,
+  } from "./stores/store";
 
   export let data;
   export let form;
@@ -19,8 +30,47 @@
   let selected;
   let total = 1;
   let date;
+
+  function updateInventoryCount(category, num) {
+    console.log("update inventory count: ", category, num);
+    switch (category) {
+      case "bedding":
+        beddingCount.update((n) => (n = n - num));
+        console.log("beddingCount: ", get(beddingCount));
+        break;
+      case "cash":
+        cashCount.update((n) => n - num);
+        console.log("cashCount: ", get(cashCount));
+        break;
+      case "clothing":
+        clothingCount.update((n) => n - num);
+        console.log("clothingCount: ", get(clothingCount));
+        break;
+      case "food":
+        foodCount.update((n) => n - num);
+        console.log("foodCount: ", get(foodCount));
+        break;
+      case "medical":
+        medicalCount.update((n) => n - num);
+        console.log("medicalCount: ", get(medicalCount));
+        break;
+      case "pet supplies":
+        petSuppliesCount.update((n) => n - num);
+        console.log("petSuppliesCount: ", get(petSuppliesCount));
+        break;
+      case "toiletries":
+        toiletriesCount.update((n) => n - num);
+        console.log("toiletriesCount: ", get(toiletriesCount));
+      default:
+        otherCount.update((n) => n - num);
+        console.log("otherCount: ", get(otherCount));
+    }
+  }
+
   function handleSubmit() {
     console.log(`We used ${total} ${selected} on ${date}.`);
+    //call totals update
+    updateInventoryCount(selected, total);
   }
 </script>
 
