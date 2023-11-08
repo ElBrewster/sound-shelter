@@ -12,5 +12,15 @@
 
       <a href="https://kingcounty.gov/en/">KING-COUNTY</a>
     </nav>
+    <div>
+      <p class="attribution">
+        Check out &#8594
+        <cite>
+          <a href="https://www.flaticon.com/free-icons/city" title="city icons"
+            >city icons created by Freepik - Flaticon</a
+          >
+        </cite>
+      </p>
+    </div>
   </div>
 </footer>

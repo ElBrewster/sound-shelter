@@ -20,4 +20,11 @@
     font-family: $footer-fine-print-family;
     font-size: $footer-fine-print;
   }
+  
+  .attribution {
+    color: $color-neutral-300;
+    font-family: $font-family-base;
+    font-size: $font-size-200;
+    font-style: italic;
+  }
 }

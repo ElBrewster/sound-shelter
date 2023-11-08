@@ -8,12 +8,12 @@
     otherCount,
     petSuppliesCount,
     toiletriesCount,
-  } from "$lib/components/stores/store.js";
-  import DonationForm from "$lib/components/DonationForm.svelte";
-  import DonorList from "$lib/components/DonorList.svelte";
-  import InventoryForm from "$lib/components/InventoryForm.svelte";
-  import InventoryTotals from "$lib/components/InventoryTotals.svelte";
-  import ToolNav from "$lib/components/ToolNav.svelte";
+  } from "$lib/svelte-stores/store.js";
+  import DonationForm from "$lib/svelte-components/DonationForm.svelte";
+  import DonorList from "$lib/svelte-components/DonorList.svelte";
+  import InventoryForm from "$lib/svelte-components/InventoryForm.svelte";
+  import InventoryTotals from "$lib/svelte-components/InventoryTotals.svelte";
+  import ToolNav from "$lib/svelte-components/ToolNav.svelte";
 
   export let form;
   export let data;

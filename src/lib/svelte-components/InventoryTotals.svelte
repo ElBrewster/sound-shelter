@@ -10,7 +10,7 @@
     otherCount,
     petSuppliesCount,
     toiletriesCount,
-  } from "./stores/store";
+  } from "../svelte-stores/store";
 
   export let data;
 
