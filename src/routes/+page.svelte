@@ -70,17 +70,6 @@
     <div class="container even-columns" data-type="narrow">
       <InventoryTotals {data} />
       <div>
-        <!-- <h2 class="heading-3 padding-block-end-4">RECENT DISTRIBUTIONS</h2>
-        <div class="flow">
-          {#each data.distributions as distribution}
-            <div class="flex-group">
-              <p>{distribution.category}</p>
-              <p>{distribution.amount} units</p>
-              <p>{distribution.date}</p>
-            </div>
-            <hr />
-          {/each}
-        </div> -->
         <table>
           <thead>
             <tr>
