@@ -91,7 +91,7 @@
 - [x] component refactors (new component `RecentDistributions`)
 - [x] ensure that InventoryTotals component is updated when first coming to the site with seeded database inventory
 - [ ] deploy app if easily done with database (check Vercel?)
-<!-- - [ ] additional logic so data persists in UI after page refresh, localstorage maybe? --> (satisfied with database checks)
+<!-- - [ ] additional logic so data persists in UI after page refresh, localstorage maybe? --> (satisfied with database checks and data interception on POST on the client side)
 - [ ] write up README and include app setup instructions,
 - [ ] especially database setup terminal commands with prisma,
 - [ ] include abstract summarizing purpose of application,
@@ -100,6 +100,8 @@
 - [ ] fix wonky donators reports, the styling and responsiveness is not on point
 - [ ] fix spacing between sections since jumping from one of the links in the toolbar nav navigates to an odd selection of sections, like 90% of the target and 20-30% of the next section, just needs cleanup
 - [ ] main `+page.svelte` needs refactoring because the script portion is so long it is not readable. Add a `utils` file somewhere? Ask in the Svelte Discord
+- [ ] refactore main `page.svelte` page because the functions are long, repetitive, and make the file unreadable
+- [ ] refactor similar functions in components
 
 ## Wishlist:
 

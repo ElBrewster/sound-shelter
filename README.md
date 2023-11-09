@@ -1,5 +1,17 @@
 # the Sound Shelter's donations management tool
 
+- [App Goals](#goals)
+- [Installation Instructions](#installation-instructions)
+- [Prisma and Database Setup](#prisma-setup-and-installs)
+- [Pictures of the App](#screenshots)
+
+- to view project planning and outline refer to `zToDo.md` in the main directory
+- to view wishlist items refer to `zToDo.md` in the main directory
+
+## Goals
+
+## Technologies
+
 ## Installation Instructions
 
 1. [Click](https://github.com/ElBrewster/sound-shelter) to open the repository.
@@ -14,15 +26,20 @@
 10. Type `npm run dev` into the terminal and view the app in your browser at `http://localhost:5173/`.
 11. Continue setup with database installs and running seed functions:
 
-### Prisma Setup and Installs
-
-1. To setup and seed database:
+### Prisma Setup and Seeding SQLite DataBase
 
 - Setup Prisma: `npx prisma init --datasource-provider sqlite`
 - Run `npx prisma migrate dev --name init` to seed database and install `@prisma/client`
 - Run `npx tsx prisma/seed.ts` if db seed isn't successful on the first try
-- View database content in the browser with by running `npx prisma studio`
-- `npx prisma generate` for distributions data model addition
+- `npx prisma generate` to generate Prisma Client
+- Browse database content in the browser with by running `npx prisma studio`
+
+I think it's just `npx prisma generate` if I already have the sqlite db set, and the folder/schema file
+and then to seed?
+
+I think it's `prisma generate/studio/migrate dev`
+
+## Screenshots
 
 This app was made by El Brewster ✨
 
