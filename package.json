@@ -16,6 +16,7 @@
 		"@sveltejs/package": "^2.2.2",
 		"@types/node": "^20.8.10",
 		"prisma": "^5.5.2",
+		"sass": "^1.69.5",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"ts-node": "^10.9.1",
@@ -29,7 +30,6 @@
 		"seed": "tsx prisma/seed.ts"
 	},
 	"dependencies": {
-		"@prisma/client": "^5.5.2",
-		"sass": "^1.69.5"
+		"@prisma/client": "^5.5.2"
 	}
 }

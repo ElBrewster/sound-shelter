@@ -1,6 +1,7 @@
 <!-- inventory report -->
 <!-- current status of donations, grouped by type -->
 <script>
+  import { browser } from "$app/environment";
   import {
     beddingCount,
     cashCount,
@@ -10,14 +11,13 @@
     otherCount,
     petSuppliesCount,
     toiletriesCount,
-  } from "./stores/store";
+  } from "../svelte-stores/store";
 
   export let data;
 
   function displayTotals() {
     console.log("data.distributions: ", data.distributions);
     //need to add logic to keep track of running totals based on database, and recent form submissions.
-    //don't want to display category repeats, so how to avoid that?
   }
 </script>
 
@@ -28,6 +28,7 @@
         <th colspan="2" class="heading-3">INVENTORY STATUS</th>
       </tr>
     </thead>
+    <!-- {#if !browser} -->
     <tbody>
       <tr>
         <td>bedding</td>
@@ -62,5 +63,6 @@
         <td>{$toiletriesCount} units</td>
       </tr>
     </tbody>
+    <!-- {/if} -->
   </table>
 </div>

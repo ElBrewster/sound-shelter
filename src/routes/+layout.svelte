@@ -1,7 +1,7 @@
 <script>
   /** @type {import('./$types').LayoutData} */
-  import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/svelte-components/Footer.svelte";
+  import Header from "$lib/svelte-components/Header.svelte";
   import "$lib/scss/main.scss";
 </script>
 
