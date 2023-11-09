@@ -48,12 +48,22 @@ This project simulates a tool for staff working at a shelter. It's core function
 
 ### Prisma Setup and Seeding SQLite DataBase
 
-- Run `npx prisma generate` to generate Prisma Client
-- Run `npx prisma studio` to view database in the browser
-- Run `npx prisma migrate` to create database migration
-- Run `npx tsx prisma/seed.ts` if db seed isn't successful with previous commands
+- In Terminal, run `npx prisma generate` to generate Prisma Client.
+- Run `npx prisma studio` to view database in the browser at `http://localhost:5555/`.
+- Run `npx prisma migrate` to create database migration.
+- Run `npx tsx prisma/seed.ts` if db seed isn't successful with previous commands.
 
 ## Screenshots
+
+<img width="657" alt="Screen Shot 2023-11-08 at 4 56 14 PM" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/9799b306-3b2a-4f95-8711-892a0190ca90">
+
+<img width="1151" alt="Screen Shot 2023-11-08 at 4 56 54 PM" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/24c338ec-8aa5-47e3-b03e-328ff4c443a4">
+
+
+<img width="1920" alt="Screen Shot 2023-11-08 at 4 57 07 PM (2)" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/73ac53ca-dd4e-484a-bcef-1bb404097b26">
+
+<img width="583" alt="Screen Shot 2023-11-08 at 4 58 10 PM" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/02961e96-4585-446a-a1a2-5e015433eb82">
+
 
 This app was made by El Brewster ✨
 
