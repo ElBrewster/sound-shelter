@@ -47,15 +47,15 @@ This project simulates a tool for staff working at a shelter. It's core function
 11. Continue setup with database installs and running seed functions:
 
 ### Prisma Setup and Seeding SQLite DataBase
+
 1. In Terminal, run `npx prisma init --datasource-provider sqlite` to set up prisma folder, database and `.env` file
-2. Copy the contents of `schema.prisma` file at the root of the project into the newly created file at `prisma/schema.prisma`
+2. Copy the contents of `_schema.prisma` file at the root of the project into the newly created file at `prisma/schema.prisma`
 3. Run `npx prisma generate` to generate Prisma Client.
-4. Run `npx prisma migrate dev --name init` to create initial migration and sync database with shema in `prisma.schema`
-5. Move the `seed.ts` file from the root of the project into the `prisma` directory.
+4. Move the `seed.ts` file from the root of the project into the `prisma` directory.
+5. Run `npx prisma migrate dev --name init` to create initial migration and sync database with shema in `prisma.schema`
 6. Run `npx tsx prisma/seed.ts` to seed database using the `seed.ts` file we moved from the root and into the prisma folder
 7. Run `npx prisma studio` to view database in the browser at `http://localhost:5555/`.
-You should now be able to view database content in reports and post successfully to database.
-
+   You should now be able to view database content in reports and post successfully to database.
 
 ## Screenshots
 
@@ -63,11 +63,9 @@ You should now be able to view database content in reports and post successfully
 
 <img width="1151" alt="Screen Shot 2023-11-08 at 4 56 54 PM" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/24c338ec-8aa5-47e3-b03e-328ff4c443a4">
 
-
 <img width="1920" alt="Screen Shot 2023-11-08 at 4 57 07 PM (2)" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/73ac53ca-dd4e-484a-bcef-1bb404097b26">
 
 <img width="583" alt="Screen Shot 2023-11-08 at 4 58 10 PM" src="https://github.com/ElBrewster/sound-shelter/assets/113723085/02961e96-4585-446a-a1a2-5e015433eb82">
-
 
 This app was made by El Brewster ✨
 
