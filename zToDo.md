@@ -89,9 +89,9 @@
 
 - [ ] small cleanup tasks:
 - [x] component refactors (new component `RecentDistributions`)
-- [ ] ensure that InventoryTotals component is updated when first coming to the site with seeded database inventory
+- [x] ensure that InventoryTotals component is updated when first coming to the site with seeded database inventory
 - [ ] deploy app if easily done with database (check Vercel?)
-- [ ] additional logic so data persists in UI after page refresh, localstorage maybe?
+<!-- - [ ] additional logic so data persists in UI after page refresh, localstorage maybe? --> (satisfied with database checks)
 - [ ] write up README and include app setup instructions,
 - [ ] especially database setup terminal commands with prisma,
 - [ ] include abstract summarizing purpose of application,
