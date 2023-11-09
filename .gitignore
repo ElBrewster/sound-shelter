@@ -12,3 +12,6 @@ vite.config.ts.timestamp-*
 _save.json
 _save.js
 svelte-help.md
+
+prisma/dev.db
+prisma/migrations
