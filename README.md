@@ -49,7 +49,7 @@ This project simulates a tool for staff working at a shelter. It's core function
 ### Prisma Setup and Seeding SQLite DataBase
 0. Delete the prisma directory. All you will need is the `schema_.prisma` and `seed.ts` files at the root of the project.
 1. In Terminal, run `npx prisma init --datasource-provider sqlite` to set up prisma folder, database and `.env` file
-2. Copy the contents of `_schema.prisma` file at the root of the project into the newly created file at `prisma/schema.prisma`
+2. Copy the contents of `schema_.prisma` file at the root of the project into the newly created file at `prisma/schema.prisma`
 3. Run `npx prisma generate` to generate Prisma Client.
 4. Move the `seed.ts` file from the root of the project into the `prisma` directory.
 5. Run `npx prisma migrate dev --name init` to create initial migration and sync database with shema in `prisma.schema`
