@@ -48,19 +48,10 @@ This project simulates a tool for staff working at a shelter. It's core function
 
 ### Prisma Setup and Seeding SQLite DataBase
 
-- Setup Prisma: `npx prisma init --datasource-provider sqlite`
-- Run `npx prisma migrate dev --name init` to seed database and install `@prisma/client`
-- Run `npx tsx prisma/seed.ts` if db seed isn't successful on the first try
-- `npx prisma generate` to generate Prisma Client
-- Browse database content in the browser with by running `npx prisma studio`
-
-I think it's just `npx prisma generate` if I already have the sqlite db set, and the folder/schema file
-and then to seed?
-
-I think it's `prisma generate/studio/migrate dev`
-`npx prisma generate`
-`npx prisma studio`
-`npx prisma migrate`
+- Run `npx prisma generate` to generate Prisma Client
+- Run `npx prisma studio` to view database in the browser
+- Run `npx prisma migrate` to create database migration
+- Run `npx tsx prisma/seed.ts` if db seed isn't successful with previous commands
 
 ## Screenshots
 
