@@ -47,11 +47,15 @@ This project simulates a tool for staff working at a shelter. It's core function
 11. Continue setup with database installs and running seed functions:
 
 ### Prisma Setup and Seeding SQLite DataBase
+1. In Terminal, run `npx prisma init --datasource-provider sqlite` to set up prisma folder, database and `.env` file
+2. Copy the contents of `schema.prisma` file at the root of the project into the newly created file at `prisma/schema.prisma`
+3. Run `npx prisma generate` to generate Prisma Client.
+4. Run `npx prisma migrate dev --name init` to create initial migration and sync database with shema in `prisma.schema`
+5. Move the `seed.ts` file from the root of the project into the `prisma` directory.
+6. Run `npx tsx prisma/seed.ts` to seed database using the `seed.ts` file we moved from the root and into the prisma folder
+7. Run `npx prisma studio` to view database in the browser at `http://localhost:5555/`.
+You should now be able to view database content in reports and post successfully to database.
 
-- In Terminal, run `npx prisma generate` to generate Prisma Client.
-- Run `npx prisma studio` to view database in the browser at `http://localhost:5555/`.
-- Run `npx prisma migrate` to create database migration.
-- Run `npx tsx prisma/seed.ts` if db seed isn't successful with previous commands.
 
 ## Screenshots
 
